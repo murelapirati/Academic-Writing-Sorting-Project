@@ -1,0 +1,1211 @@
+Parallel Sorting benchmark
+Machine CPU count: 16
+Worker counts to test: [4, 8, 16]
+Algorithms: parallel_bubble_sort, parallel_insertion_sort, parallel_merge_sort, parallel_quick_sort
+Total jobs: 900
+Dataset policy:
+  - all algorithms: all datasets (all types and sizes) 
+Timeout per sort: 120s
+
+   #  algorithm                workers  dataset                                                       wall    speedup   efficiency  status
+------------------------------------------------------------------------------------------------------------------------------------------
+   1  parallel_bubble_sort           4  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+   2  parallel_bubble_sort           8  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+   3  parallel_bubble_sort          16  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+
+   4  parallel_insertion_sort        4  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+   5  parallel_insertion_sort        8  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+   6  parallel_insertion_sort       16  Int: Duplicates (n=1,000,000)                          —         —                       —  TIMEOUT
+
+   7  parallel_merge_sort            4  Int: Duplicates (n=1,000,000)                      738.296 ms     1.000                   0.250  ok
+   8  parallel_merge_sort            8  Int: Duplicates (n=1,000,000)                      617.843 ms     1.195                   0.149  ok
+   9  parallel_merge_sort           16  Int: Duplicates (n=1,000,000)                      657.196 ms     1.123                   0.070  ok
+
+  10  parallel_quick_sort            4  Int: Duplicates (n=1,000,000)                      372.199 ms     1.000                   0.250  ok
+  11  parallel_quick_sort            8  Int: Duplicates (n=1,000,000)                      404.084 ms     0.921                   0.115  ok
+  12  parallel_quick_sort           16  Int: Duplicates (n=1,000,000)                      469.260 ms     0.793                   0.050  ok
+
+  13  parallel_bubble_sort           4  Int: Duplicates (n=100,000)                        89.825 s     1.000                   0.250  ok
+  14  parallel_bubble_sort           8  Int: Duplicates (n=100,000)                        27.429 s     3.275                   0.409  ok
+  15  parallel_bubble_sort          16  Int: Duplicates (n=100,000)                        9.867 s     9.103                   0.569  ok
+
+  16  parallel_insertion_sort        4  Int: Duplicates (n=100,000)                            —         —                       —  TIMEOUT
+  17  parallel_insertion_sort        8  Int: Duplicates (n=100,000)                        77.768 s         —                       —  ok
+  18  parallel_insertion_sort       16  Int: Duplicates (n=100,000)                        22.811 s         —                       —  ok
+
+  19  parallel_merge_sort            4  Int: Duplicates (n=100,000)                        109.383 ms     1.000                   0.250  ok
+  20  parallel_merge_sort            8  Int: Duplicates (n=100,000)                        120.832 ms     0.905                   0.113  ok
+  21  parallel_merge_sort           16  Int: Duplicates (n=100,000)                        146.894 ms     0.745                   0.047  ok
+
+  22  parallel_quick_sort            4  Int: Duplicates (n=100,000)                        78.653 ms     1.000                   0.250  ok
+  23  parallel_quick_sort            8  Int: Duplicates (n=100,000)                        89.173 ms     0.882                   0.110  ok
+  24  parallel_quick_sort           16  Int: Duplicates (n=100,000)                        120.673 ms     0.652                   0.041  ok
+
+  25  parallel_bubble_sort           4  Int: Duplicates (n=10,000)                         1.197 s     1.000                   0.250  ok
+  26  parallel_bubble_sort           8  Int: Duplicates (n=10,000)                         372.854 ms     3.211                   0.401  ok
+  27  parallel_bubble_sort          16  Int: Duplicates (n=10,000)                         411.709 ms     2.908                   0.182  ok
+
+  28  parallel_insertion_sort        4  Int: Duplicates (n=10,000)                         3.370 s     1.000                   0.250  ok
+  29  parallel_insertion_sort        8  Int: Duplicates (n=10,000)                         2.559 s     1.317                   0.165  ok
+  30  parallel_insertion_sort       16  Int: Duplicates (n=10,000)                         790.721 ms     4.261                   0.266  ok
+
+  31  parallel_merge_sort            4  Int: Duplicates (n=10,000)                         57.450 ms     1.000                   0.250  ok
+  32  parallel_merge_sort            8  Int: Duplicates (n=10,000)                         62.979 ms     0.912                   0.114  ok
+  33  parallel_merge_sort           16  Int: Duplicates (n=10,000)                         83.709 ms     0.686                   0.043  ok
+
+  34  parallel_quick_sort            4  Int: Duplicates (n=10,000)                         51.435 ms     1.000                   0.250  ok
+  35  parallel_quick_sort            8  Int: Duplicates (n=10,000)                         59.748 ms     0.861                   0.108  ok
+  36  parallel_quick_sort           16  Int: Duplicates (n=10,000)                         85.156 ms     0.604                   0.038  ok
+
+  37  parallel_bubble_sort           4  Int: Duplicates (n=1,000)                          146.349 ms     1.000                   0.250  ok
+  38  parallel_bubble_sort           8  Int: Duplicates (n=1,000)                          150.959 ms     0.969                   0.121  ok
+  39  parallel_bubble_sort          16  Int: Duplicates (n=1,000)                          165.473 ms     0.884                   0.055  ok
+
+  40  parallel_insertion_sort        4  Int: Duplicates (n=1,000)                          387.704 ms     1.000                   0.250  ok
+  41  parallel_insertion_sort        8  Int: Duplicates (n=1,000)                          309.912 ms     1.251                   0.156  ok
+  42  parallel_insertion_sort       16  Int: Duplicates (n=1,000)                          478.157 ms     0.811                   0.051  ok
+
+  43  parallel_merge_sort            4  Int: Duplicates (n=1,000)                          1.033 ms     1.000                   0.250  ok
+  44  parallel_merge_sort            8  Int: Duplicates (n=1,000)                          1.030 ms     1.003                   0.125  ok
+  45  parallel_merge_sort           16  Int: Duplicates (n=1,000)                          1.037 ms     0.996                   0.062  ok
+
+  46  parallel_quick_sort            4  Int: Duplicates (n=1,000)                          212.518 µs     1.000                   0.250  ok
+  47  parallel_quick_sort            8  Int: Duplicates (n=1,000)                          213.590 µs     0.995                   0.124  ok
+  48  parallel_quick_sort           16  Int: Duplicates (n=1,000)                          208.911 µs     1.017                   0.064  ok
+
+  49  parallel_bubble_sort           4  Int: Duplicates (n=20)                             26.901 µs     1.000                   0.250  ok
+  50  parallel_bubble_sort           8  Int: Duplicates (n=20)                             23.264 µs     1.156                   0.144  ok
+  51  parallel_bubble_sort          16  Int: Duplicates (n=20)                             24.116 µs     1.115                   0.070  ok
+
+  52  parallel_insertion_sort        4  Int: Duplicates (n=20)                             14.247 µs     1.000                   0.250  ok
+  53  parallel_insertion_sort        8  Int: Duplicates (n=20)                             14.587 µs     0.977                   0.122  ok
+  54  parallel_insertion_sort       16  Int: Duplicates (n=20)                             14.087 µs     1.011                   0.063  ok
+
+  55  parallel_merge_sort            4  Int: Duplicates (n=20)                             23.013 µs     1.000                   0.250  ok
+  56  parallel_merge_sort            8  Int: Duplicates (n=20)                             26.610 µs     0.865                   0.108  ok
+  57  parallel_merge_sort           16  Int: Duplicates (n=20)                             23.173 µs     0.993                   0.062  ok
+
+  58  parallel_quick_sort            4  Int: Duplicates (n=20)                             11.672 µs     1.000                   0.250  ok
+  59  parallel_quick_sort            8  Int: Duplicates (n=20)                             11.913 µs     0.980                   0.122  ok
+  60  parallel_quick_sort           16  Int: Duplicates (n=20)                             11.381 µs     1.026                   0.064  ok
+
+  61  parallel_bubble_sort           4  Int: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+  62  parallel_bubble_sort           8  Int: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+  63  parallel_bubble_sort          16  Int: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+
+  64  parallel_insertion_sort        4  Int: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+  65  parallel_insertion_sort        8  Int: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+  66  parallel_insertion_sort       16  Int: Nearly Sorted (n=1,000,000)                   97.701 s         —                       —  ok
+
+  67  parallel_merge_sort            4  Int: Nearly Sorted (n=1,000,000)                   783.113 ms     1.000                   0.250  ok
+  68  parallel_merge_sort            8  Int: Nearly Sorted (n=1,000,000)                   685.931 ms     1.142                   0.143  ok
+  69  parallel_merge_sort           16  Int: Nearly Sorted (n=1,000,000)                   644.891 ms     1.214                   0.076  ok
+
+  70  parallel_quick_sort            4  Int: Nearly Sorted (n=1,000,000)                   1.023 s     1.000                   0.250  ok
+  71  parallel_quick_sort            8  Int: Nearly Sorted (n=1,000,000)                   808.806 ms     1.265                   0.158  ok
+  72  parallel_quick_sort           16  Int: Nearly Sorted (n=1,000,000)                   733.189 ms     1.395                   0.087  ok
+
+  73  parallel_bubble_sort           4  Int: Nearly Sorted (n=100,000)                     84.293 s     1.000                   0.250  ok
+  74  parallel_bubble_sort           8  Int: Nearly Sorted (n=100,000)                     32.104 s     2.626                   0.328  ok
+  75  parallel_bubble_sort          16  Int: Nearly Sorted (n=100,000)                     8.846 s     9.529                   0.596  ok
+
+  76  parallel_insertion_sort        4  Int: Nearly Sorted (n=100,000)                     13.259 s     1.000                   0.250  ok
+  77  parallel_insertion_sort        8  Int: Nearly Sorted (n=100,000)                     6.003 s     2.209                   0.276  ok
+  78  parallel_insertion_sort       16  Int: Nearly Sorted (n=100,000)                     3.020 s     4.391                   0.274  ok
+
+  79  parallel_merge_sort            4  Int: Nearly Sorted (n=100,000)                     113.111 ms     1.000                   0.250  ok
+  80  parallel_merge_sort            8  Int: Nearly Sorted (n=100,000)                     114.317 ms     0.989                   0.124  ok
+  81  parallel_merge_sort           16  Int: Nearly Sorted (n=100,000)                     152.627 ms     0.741                   0.046  ok
+
+  82  parallel_quick_sort            4  Int: Nearly Sorted (n=100,000)                     143.930 ms     1.000                   0.250  ok
+  83  parallel_quick_sort            8  Int: Nearly Sorted (n=100,000)                     138.769 ms     1.037                   0.130  ok
+  84  parallel_quick_sort           16  Int: Nearly Sorted (n=100,000)                     164.658 ms     0.874                   0.055  ok
+
+  85  parallel_bubble_sort           4  Int: Nearly Sorted (n=10,000)                      997.133 ms     1.000                   0.250  ok
+  86  parallel_bubble_sort           8  Int: Nearly Sorted (n=10,000)                      556.460 ms     1.792                   0.224  ok
+  87  parallel_bubble_sort          16  Int: Nearly Sorted (n=10,000)                      355.582 ms     2.804                   0.175  ok
+
+  88  parallel_insertion_sort        4  Int: Nearly Sorted (n=10,000)                      183.846 ms     1.000                   0.250  ok
+  89  parallel_insertion_sort        8  Int: Nearly Sorted (n=10,000)                      384.061 ms     0.479                   0.060  ok
+  90  parallel_insertion_sort       16  Int: Nearly Sorted (n=10,000)                      519.580 ms     0.354                   0.022  ok
+
+  91  parallel_merge_sort            4  Int: Nearly Sorted (n=10,000)                      53.027 ms     1.000                   0.250  ok
+  92  parallel_merge_sort            8  Int: Nearly Sorted (n=10,000)                      59.707 ms     0.888                   0.111  ok
+  93  parallel_merge_sort           16  Int: Nearly Sorted (n=10,000)                      86.159 ms     0.615                   0.038  ok
+
+  94  parallel_quick_sort            4  Int: Nearly Sorted (n=10,000)                      57.194 ms     1.000                   0.250  ok
+  95  parallel_quick_sort            8  Int: Nearly Sorted (n=10,000)                      63.416 ms     0.902                   0.113  ok
+  96  parallel_quick_sort           16  Int: Nearly Sorted (n=10,000)                      85.189 ms     0.671                   0.042  ok
+
+  97  parallel_bubble_sort           4  Int: Nearly Sorted (n=1,000)                       187.530 ms     1.000                   0.250  ok
+  98  parallel_bubble_sort           8  Int: Nearly Sorted (n=1,000)                       161.701 ms     1.160                   0.145  ok
+  99  parallel_bubble_sort          16  Int: Nearly Sorted (n=1,000)                       373.264 ms     0.502                   0.031  ok
+
+ 100  parallel_insertion_sort        4  Int: Nearly Sorted (n=1,000)                       207.832 ms     1.000                   0.250  ok
+ 101  parallel_insertion_sort        8  Int: Nearly Sorted (n=1,000)                       392.234 ms     0.530                   0.066  ok
+ 102  parallel_insertion_sort       16  Int: Nearly Sorted (n=1,000)                       621.446 ms     0.334                   0.021  ok
+
+ 103  parallel_merge_sort            4  Int: Nearly Sorted (n=1,000)                       871.893 µs     1.000                   0.250  ok
+ 104  parallel_merge_sort            8  Int: Nearly Sorted (n=1,000)                       1.442 ms     0.605                   0.076  ok
+ 105  parallel_merge_sort           16  Int: Nearly Sorted (n=1,000)                       876.782 µs     0.994                   0.062  ok
+
+ 106  parallel_quick_sort            4  Int: Nearly Sorted (n=1,000)                       1.169 ms     1.000                   0.250  ok
+ 107  parallel_quick_sort            8  Int: Nearly Sorted (n=1,000)                       1.123 ms     1.041                   0.130  ok
+ 108  parallel_quick_sort           16  Int: Nearly Sorted (n=1,000)                       1.143 ms     1.022                   0.064  ok
+
+ 109  parallel_bubble_sort           4  Int: Nearly Sorted (n=20)                          17.663 µs     1.000                   0.250  ok
+ 110  parallel_bubble_sort           8  Int: Nearly Sorted (n=20)                          17.463 µs     1.011                   0.126  ok
+ 111  parallel_bubble_sort          16  Int: Nearly Sorted (n=20)                          17.683 µs     0.999                   0.062  ok
+
+ 112  parallel_insertion_sort        4  Int: Nearly Sorted (n=20)                          9.828 µs     1.000                   0.250  ok
+ 113  parallel_insertion_sort        8  Int: Nearly Sorted (n=20)                          9.127 µs     1.077                   0.135  ok
+ 114  parallel_insertion_sort       16  Int: Nearly Sorted (n=20)                          9.778 µs     1.005                   0.063  ok
+
+ 115  parallel_merge_sort            4  Int: Nearly Sorted (n=20)                          21.570 µs     1.000                   0.250  ok
+ 116  parallel_merge_sort            8  Int: Nearly Sorted (n=20)                          22.623 µs     0.953                   0.119  ok
+ 117  parallel_merge_sort           16  Int: Nearly Sorted (n=20)                          21.510 µs     1.003                   0.063  ok
+
+ 118  parallel_quick_sort            4  Int: Nearly Sorted (n=20)                          14.176 µs     1.000                   0.250  ok
+ 119  parallel_quick_sort            8  Int: Nearly Sorted (n=20)                          14.658 µs     0.967                   0.121  ok
+ 120  parallel_quick_sort           16  Int: Nearly Sorted (n=20)                          15.339 µs     0.924                   0.058  ok
+
+ 121  parallel_bubble_sort           4  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 122  parallel_bubble_sort           8  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 123  parallel_bubble_sort          16  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+
+ 124  parallel_insertion_sort        4  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 125  parallel_insertion_sort        8  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 126  parallel_insertion_sort       16  Int: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+
+ 127  parallel_merge_sort            4  Int: Random (n=1,000,000)                          973.275 ms     1.000                   0.250  ok
+ 128  parallel_merge_sort            8  Int: Random (n=1,000,000)                          736.100 ms     1.322                   0.165  ok
+ 129  parallel_merge_sort           16  Int: Random (n=1,000,000)                          692.836 ms     1.405                   0.088  ok
+
+ 130  parallel_quick_sort            4  Int: Random (n=1,000,000)                          928.617 ms     1.000                   0.250  ok
+ 131  parallel_quick_sort            8  Int: Random (n=1,000,000)                          685.058 ms     1.356                   0.170  ok
+ 132  parallel_quick_sort           16  Int: Random (n=1,000,000)                          697.118 ms     1.332                   0.083  ok
+
+ 133  parallel_bubble_sort           4  Int: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 134  parallel_bubble_sort           8  Int: Random (n=100,000)                            66.727 s         —                       —  ok
+ 135  parallel_bubble_sort          16  Int: Random (n=100,000)                            18.184 s         —                       —  ok
+
+ 136  parallel_insertion_sort        4  Int: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 137  parallel_insertion_sort        8  Int: Random (n=100,000)                            106.972 s         —                       —  ok
+ 138  parallel_insertion_sort       16  Int: Random (n=100,000)                            25.608 s         —                       —  ok
+
+ 139  parallel_merge_sort            4  Int: Random (n=100,000)                            131.768 ms     1.000                   0.250  ok
+ 140  parallel_merge_sort            8  Int: Random (n=100,000)                            126.901 ms     1.038                   0.130  ok
+ 141  parallel_merge_sort           16  Int: Random (n=100,000)                            137.567 ms     0.958                   0.060  ok
+
+ 142  parallel_quick_sort            4  Int: Random (n=100,000)                            115.686 ms     1.000                   0.250  ok
+ 143  parallel_quick_sort            8  Int: Random (n=100,000)                            110.707 ms     1.045                   0.131  ok
+ 144  parallel_quick_sort           16  Int: Random (n=100,000)                            135.946 ms     0.851                   0.053  ok
+
+ 145  parallel_bubble_sort           4  Int: Random (n=10,000)                             2.902 s     1.000                   0.250  ok
+ 146  parallel_bubble_sort           8  Int: Random (n=10,000)                             820.069 ms     3.538                   0.442  ok
+ 147  parallel_bubble_sort          16  Int: Random (n=10,000)                             699.984 ms     4.145                   0.259  ok
+
+ 148  parallel_insertion_sort        4  Int: Random (n=10,000)                             5.424 s     1.000                   0.250  ok
+ 149  parallel_insertion_sort        8  Int: Random (n=10,000)                             1.897 s     2.860                   0.357  ok
+ 150  parallel_insertion_sort       16  Int: Random (n=10,000)                             807.066 ms     6.720                   0.420  ok
+
+ 151  parallel_merge_sort            4  Int: Random (n=10,000)                             54.550 ms     1.000                   0.250  ok
+ 152  parallel_merge_sort            8  Int: Random (n=10,000)                             55.125 ms     0.990                   0.124  ok
+ 153  parallel_merge_sort           16  Int: Random (n=10,000)                             82.050 ms     0.665                   0.042  ok
+
+ 154  parallel_quick_sort            4  Int: Random (n=10,000)                             51.282 ms     1.000                   0.250  ok
+ 155  parallel_quick_sort            8  Int: Random (n=10,000)                             56.011 ms     0.916                   0.115  ok
+ 156  parallel_quick_sort           16  Int: Random (n=10,000)                             80.691 ms     0.636                   0.040  ok
+
+ 157  parallel_bubble_sort           4  Int: Random (n=1,000)                              215.216 ms     1.000                   0.250  ok
+ 158  parallel_bubble_sort           8  Int: Random (n=1,000)                              128.992 ms     1.668                   0.208  ok
+ 159  parallel_bubble_sort          16  Int: Random (n=1,000)                              232.140 ms     0.927                   0.058  ok
+
+ 160  parallel_insertion_sort        4  Int: Random (n=1,000)                              249.804 ms     1.000                   0.250  ok
+ 161  parallel_insertion_sort        8  Int: Random (n=1,000)                              183.654 ms     1.360                   0.170  ok
+ 162  parallel_insertion_sort       16  Int: Random (n=1,000)                              448.395 ms     0.557                   0.035  ok
+
+ 163  parallel_merge_sort            4  Int: Random (n=1,000)                              1.074 ms     1.000                   0.250  ok
+ 164  parallel_merge_sort            8  Int: Random (n=1,000)                              1.089 ms     0.986                   0.123  ok
+ 165  parallel_merge_sort           16  Int: Random (n=1,000)                              1.197 ms     0.898                   0.056  ok
+
+ 166  parallel_quick_sort            4  Int: Random (n=1,000)                              918.540 µs     1.000                   0.250  ok
+ 167  parallel_quick_sort            8  Int: Random (n=1,000)                              912.018 µs     1.007                   0.126  ok
+ 168  parallel_quick_sort           16  Int: Random (n=1,000)                              904.293 µs     1.016                   0.064  ok
+
+ 169  parallel_bubble_sort           4  Int: Random (n=20)                                 22.151 µs     1.000                   0.250  ok
+ 170  parallel_bubble_sort           8  Int: Random (n=20)                                 24.817 µs     0.893                   0.112  ok
+ 171  parallel_bubble_sort          16  Int: Random (n=20)                                 25.127 µs     0.882                   0.055  ok
+
+ 172  parallel_insertion_sort        4  Int: Random (n=20)                                 15.850 µs     1.000                   0.250  ok
+ 173  parallel_insertion_sort        8  Int: Random (n=20)                                 13.325 µs     1.189                   0.149  ok
+ 174  parallel_insertion_sort       16  Int: Random (n=20)                                 16.682 µs     0.950                   0.059  ok
+
+ 175  parallel_merge_sort            4  Int: Random (n=20)                                 31.880 µs     1.000                   0.250  ok
+ 176  parallel_merge_sort            8  Int: Random (n=20)                                 22.923 µs     1.391                   0.174  ok
+ 177  parallel_merge_sort           16  Int: Random (n=20)                                 23.023 µs     1.385                   0.087  ok
+
+ 178  parallel_quick_sort            4  Int: Random (n=20)                                 14.697 µs     1.000                   0.250  ok
+ 179  parallel_quick_sort            8  Int: Random (n=20)                                 14.407 µs     1.020                   0.128  ok
+ 180  parallel_quick_sort           16  Int: Random (n=20)                                 14.898 µs     0.987                   0.062  ok
+
+ 181  parallel_bubble_sort           4  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 182  parallel_bubble_sort           8  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 183  parallel_bubble_sort          16  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+
+ 184  parallel_insertion_sort        4  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 185  parallel_insertion_sort        8  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 186  parallel_insertion_sort       16  Int: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+
+ 187  parallel_merge_sort            4  Int: Reverse (n=1,000,000)                         640.363 ms     1.000                   0.250  ok
+ 188  parallel_merge_sort            8  Int: Reverse (n=1,000,000)                         551.356 ms     1.161                   0.145  ok
+ 189  parallel_merge_sort           16  Int: Reverse (n=1,000,000)                         564.270 ms     1.135                   0.071  ok
+
+ 190  parallel_quick_sort            4  Int: Reverse (n=1,000,000)                         3.969 s     1.000                   0.250  ok
+ 191  parallel_quick_sort            8  Int: Reverse (n=1,000,000)                         1.879 s     2.112                   0.264  ok
+ 192  parallel_quick_sort           16  Int: Reverse (n=1,000,000)                         1.449 s     2.740                   0.171  ok
+
+ 193  parallel_bubble_sort           4  Int: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 194  parallel_bubble_sort           8  Int: Reverse (n=100,000)                           94.066 s         —                       —  ok
+ 195  parallel_bubble_sort          16  Int: Reverse (n=100,000)                           34.587 s         —                       —  ok
+
+ 196  parallel_insertion_sort        4  Int: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 197  parallel_insertion_sort        8  Int: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 198  parallel_insertion_sort       16  Int: Reverse (n=100,000)                           42.161 s         —                       —  ok
+
+ 199  parallel_merge_sort            4  Int: Reverse (n=100,000)                           102.952 ms     1.000                   0.250  ok
+ 200  parallel_merge_sort            8  Int: Reverse (n=100,000)                           101.968 ms     1.010                   0.126  ok
+ 201  parallel_merge_sort           16  Int: Reverse (n=100,000)                           136.179 ms     0.756                   0.047  ok
+
+ 202  parallel_quick_sort            4  Int: Reverse (n=100,000)                           204.199 ms     1.000                   0.250  ok
+ 203  parallel_quick_sort            8  Int: Reverse (n=100,000)                           151.090 ms     1.352                   0.169  ok
+ 204  parallel_quick_sort           16  Int: Reverse (n=100,000)                           161.851 ms     1.262                   0.079  ok
+
+ 205  parallel_bubble_sort           4  Int: Reverse (n=10,000)                            5.076 s     1.000                   0.250  ok
+ 206  parallel_bubble_sort           8  Int: Reverse (n=10,000)                            828.638 ms     6.125                   0.766  ok
+ 207  parallel_bubble_sort          16  Int: Reverse (n=10,000)                            574.289 ms     8.838                   0.552  ok
+
+ 208  parallel_insertion_sort        4  Int: Reverse (n=10,000)                            7.761 s     1.000                   0.250  ok
+ 209  parallel_insertion_sort        8  Int: Reverse (n=10,000)                            2.035 s     3.813                   0.477  ok
+ 210  parallel_insertion_sort       16  Int: Reverse (n=10,000)                            1.133 s     6.850                   0.428  ok
+
+ 211  parallel_merge_sort            4  Int: Reverse (n=10,000)                            54.183 ms     1.000                   0.250  ok
+ 212  parallel_merge_sort            8  Int: Reverse (n=10,000)                            60.698 ms     0.893                   0.112  ok
+ 213  parallel_merge_sort           16  Int: Reverse (n=10,000)                            82.182 ms     0.659                   0.041  ok
+
+ 214  parallel_quick_sort            4  Int: Reverse (n=10,000)                            55.379 ms     1.000                   0.250  ok
+ 215  parallel_quick_sort            8  Int: Reverse (n=10,000)                            60.878 ms     0.910                   0.114  ok
+ 216  parallel_quick_sort           16  Int: Reverse (n=10,000)                            85.415 ms     0.648                   0.041  ok
+
+ 217  parallel_bubble_sort           4  Int: Reverse (n=1,000)                             268.508 ms     1.000                   0.250  ok
+ 218  parallel_bubble_sort           8  Int: Reverse (n=1,000)                             383.038 ms     0.701                   0.088  ok
+ 219  parallel_bubble_sort          16  Int: Reverse (n=1,000)                             299.160 ms     0.898                   0.056  ok
+
+ 220  parallel_insertion_sort        4  Int: Reverse (n=1,000)                             1.017 s     1.000                   0.250  ok
+ 221  parallel_insertion_sort        8  Int: Reverse (n=1,000)                             305.815 ms     3.326                   0.416  ok
+ 222  parallel_insertion_sort       16  Int: Reverse (n=1,000)                             736.615 ms     1.381                   0.086  ok
+
+ 223  parallel_merge_sort            4  Int: Reverse (n=1,000)                             802.422 µs     1.000                   0.250  ok
+ 224  parallel_merge_sort            8  Int: Reverse (n=1,000)                             755.084 µs     1.063                   0.133  ok
+ 225  parallel_merge_sort           16  Int: Reverse (n=1,000)                             758.891 µs     1.057                   0.066  ok
+
+ 226  parallel_quick_sort            4  Int: Reverse (n=1,000)                             1.277 ms     1.000                   0.250  ok
+ 227  parallel_quick_sort            8  Int: Reverse (n=1,000)                             1.266 ms     1.008                   0.126  ok
+ 228  parallel_quick_sort           16  Int: Reverse (n=1,000)                             1.292 ms     0.988                   0.062  ok
+
+ 229  parallel_bubble_sort           4  Int: Reverse (n=20)                                29.967 µs     1.000                   0.250  ok
+ 230  parallel_bubble_sort           8  Int: Reverse (n=20)                                30.759 µs     0.974                   0.122  ok
+ 231  parallel_bubble_sort          16  Int: Reverse (n=20)                                29.316 µs     1.022                   0.064  ok
+
+ 232  parallel_insertion_sort        4  Int: Reverse (n=20)                                21.911 µs     1.000                   0.250  ok
+ 233  parallel_insertion_sort        8  Int: Reverse (n=20)                                19.496 µs     1.124                   0.141  ok
+ 234  parallel_insertion_sort       16  Int: Reverse (n=20)                                20.399 µs     1.074                   0.067  ok
+
+ 235  parallel_merge_sort            4  Int: Reverse (n=20)                                27.431 µs     1.000                   0.250  ok
+ 236  parallel_merge_sort            8  Int: Reverse (n=20)                                20.358 µs     1.347                   0.168  ok
+ 237  parallel_merge_sort           16  Int: Reverse (n=20)                                28.203 µs     0.973                   0.061  ok
+
+ 238  parallel_quick_sort            4  Int: Reverse (n=20)                                13.916 µs     1.000                   0.250  ok
+ 239  parallel_quick_sort            8  Int: Reverse (n=20)                                17.873 µs     0.779                   0.097  ok
+ 240  parallel_quick_sort           16  Int: Reverse (n=20)                                13.966 µs     0.996                   0.062  ok
+
+ 241  parallel_bubble_sort           4  Int: Sorted (n=1,000,000)                          3.782 s     1.000                   0.250  ok
+ 242  parallel_bubble_sort           8  Int: Sorted (n=1,000,000)                          2.778 s     1.362                   0.170  ok
+ 243  parallel_bubble_sort          16  Int: Sorted (n=1,000,000)                          4.796 s     0.789                   0.049  ok
+
+ 244  parallel_insertion_sort        4  Int: Sorted (n=1,000,000)                          6.964 s     1.000                   0.250  ok
+ 245  parallel_insertion_sort        8  Int: Sorted (n=1,000,000)                          6.921 s     1.006                   0.126  ok
+ 246  parallel_insertion_sort       16  Int: Sorted (n=1,000,000)                          9.692 s     0.719                   0.045  ok
+
+ 247  parallel_merge_sort            4  Int: Sorted (n=1,000,000)                          633.941 ms     1.000                   0.250  ok
+ 248  parallel_merge_sort            8  Int: Sorted (n=1,000,000)                          525.094 ms     1.207                   0.151  ok
+ 249  parallel_merge_sort           16  Int: Sorted (n=1,000,000)                          539.339 ms     1.175                   0.073  ok
+
+ 250  parallel_quick_sort            4  Int: Sorted (n=1,000,000)                          7.001 s     1.000                   0.250  ok
+ 251  parallel_quick_sort            8  Int: Sorted (n=1,000,000)                          2.639 s     2.653                   0.332  ok
+ 252  parallel_quick_sort           16  Int: Sorted (n=1,000,000)                          1.858 s     3.767                   0.235  ok
+
+ 253  parallel_bubble_sort           4  Int: Sorted (n=100,000)                            552.549 ms     1.000                   0.250  ok
+ 254  parallel_bubble_sort           8  Int: Sorted (n=100,000)                            385.699 ms     1.433                   0.179  ok
+ 255  parallel_bubble_sort          16  Int: Sorted (n=100,000)                            588.882 ms     0.938                   0.059  ok
+
+ 256  parallel_insertion_sort        4  Int: Sorted (n=100,000)                            493.079 ms     1.000                   0.250  ok
+ 257  parallel_insertion_sort        8  Int: Sorted (n=100,000)                            1.897 s     0.260                   0.033  ok
+ 258  parallel_insertion_sort       16  Int: Sorted (n=100,000)                            656.757 ms     0.751                   0.047  ok
+
+ 259  parallel_merge_sort            4  Int: Sorted (n=100,000)                            117.725 ms     1.000                   0.250  ok
+ 260  parallel_merge_sort            8  Int: Sorted (n=100,000)                            103.242 ms     1.140                   0.142  ok
+ 261  parallel_merge_sort           16  Int: Sorted (n=100,000)                            141.703 ms     0.831                   0.052  ok
+
+ 262  parallel_quick_sort            4  Int: Sorted (n=100,000)                            255.112 ms     1.000                   0.250  ok
+ 263  parallel_quick_sort            8  Int: Sorted (n=100,000)                            180.268 ms     1.415                   0.177  ok
+ 264  parallel_quick_sort           16  Int: Sorted (n=100,000)                            183.284 ms     1.392                   0.087  ok
+
+ 265  parallel_bubble_sort           4  Int: Sorted (n=10,000)                             278.577 ms     1.000                   0.250  ok
+ 266  parallel_bubble_sort           8  Int: Sorted (n=10,000)                             372.739 ms     0.747                   0.093  ok
+ 267  parallel_bubble_sort          16  Int: Sorted (n=10,000)                             258.827 ms     1.076                   0.067  ok
+
+ 268  parallel_insertion_sort        4  Int: Sorted (n=10,000)                             264.954 ms     1.000                   0.250  ok
+ 269  parallel_insertion_sort        8  Int: Sorted (n=10,000)                             360.346 ms     0.735                   0.092  ok
+ 270  parallel_insertion_sort       16  Int: Sorted (n=10,000)                             522.310 ms     0.507                   0.032  ok
+
+ 271  parallel_merge_sort            4  Int: Sorted (n=10,000)                             53.499 ms     1.000                   0.250  ok
+ 272  parallel_merge_sort            8  Int: Sorted (n=10,000)                             59.109 ms     0.905                   0.113  ok
+ 273  parallel_merge_sort           16  Int: Sorted (n=10,000)                             92.199 ms     0.580                   0.036  ok
+
+ 274  parallel_quick_sort            4  Int: Sorted (n=10,000)                             59.378 ms     1.000                   0.250  ok
+ 275  parallel_quick_sort            8  Int: Sorted (n=10,000)                             71.925 ms     0.826                   0.103  ok
+ 276  parallel_quick_sort           16  Int: Sorted (n=10,000)                             82.871 ms     0.717                   0.045  ok
+
+ 277  parallel_bubble_sort           4  Int: Sorted (n=1,000)                              178.549 ms     1.000                   0.250  ok
+ 278  parallel_bubble_sort           8  Int: Sorted (n=1,000)                              199.577 ms     0.895                   0.112  ok
+ 279  parallel_bubble_sort          16  Int: Sorted (n=1,000)                              286.505 ms     0.623                   0.039  ok
+
+ 280  parallel_insertion_sort        4  Int: Sorted (n=1,000)                              187.832 ms     1.000                   0.250  ok
+ 281  parallel_insertion_sort        8  Int: Sorted (n=1,000)                              853.953 ms     0.220                   0.028  ok
+ 282  parallel_insertion_sort       16  Int: Sorted (n=1,000)                              395.213 ms     0.475                   0.030  ok
+
+ 283  parallel_merge_sort            4  Int: Sorted (n=1,000)                              753.551 µs     1.000                   0.250  ok
+ 284  parallel_merge_sort            8  Int: Sorted (n=1,000)                              749.133 µs     1.006                   0.126  ok
+ 285  parallel_merge_sort           16  Int: Sorted (n=1,000)                              993.330 µs     0.759                   0.047  ok
+
+ 286  parallel_quick_sort            4  Int: Sorted (n=1,000)                              1.790 ms     1.000                   0.250  ok
+ 287  parallel_quick_sort            8  Int: Sorted (n=1,000)                              1.544 ms     1.159                   0.145  ok
+ 288  parallel_quick_sort           16  Int: Sorted (n=1,000)                              1.535 ms     1.166                   0.073  ok
+
+ 289  parallel_bubble_sort           4  Int: Sorted (n=20)                                 4.950 µs     1.000                   0.250  ok
+ 290  parallel_bubble_sort           8  Int: Sorted (n=20)                                 5.901 µs     0.839                   0.105  ok
+ 291  parallel_bubble_sort          16  Int: Sorted (n=20)                                 4.950 µs     1.000                   0.062  ok
+
+ 292  parallel_insertion_sort        4  Int: Sorted (n=20)                                 6.312 µs     1.000                   0.250  ok
+ 293  parallel_insertion_sort        8  Int: Sorted (n=20)                                 7.003 µs     0.901                   0.113  ok
+ 294  parallel_insertion_sort       16  Int: Sorted (n=20)                                 7.284 µs     0.867                   0.054  ok
+
+ 295  parallel_merge_sort            4  Int: Sorted (n=20)                                 20.147 µs     1.000                   0.250  ok
+ 296  parallel_merge_sort            8  Int: Sorted (n=20)                                 20.999 µs     0.959                   0.120  ok
+ 297  parallel_merge_sort           16  Int: Sorted (n=20)                                 20.218 µs     0.996                   0.062  ok
+
+ 298  parallel_quick_sort            4  Int: Sorted (n=20)                                 14.166 µs     1.000                   0.250  ok
+ 299  parallel_quick_sort            8  Int: Sorted (n=20)                                 14.607 µs     0.970                   0.121  ok
+ 300  parallel_quick_sort           16  Int: Sorted (n=20)                                 14.617 µs     0.969                   0.061  ok
+
+ 301  parallel_bubble_sort           4  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+ 302  parallel_bubble_sort           8  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+ 303  parallel_bubble_sort          16  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+
+ 304  parallel_insertion_sort        4  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+ 305  parallel_insertion_sort        8  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+ 306  parallel_insertion_sort       16  Str: Mixed Case (n=1,000,000)                          —         —                       —  TIMEOUT
+
+ 307  parallel_merge_sort            4  Str: Mixed Case (n=1,000,000)                      1.254 s     1.000                   0.250  ok
+ 308  parallel_merge_sort            8  Str: Mixed Case (n=1,000,000)                      943.602 ms     1.329                   0.166  ok
+ 309  parallel_merge_sort           16  Str: Mixed Case (n=1,000,000)                      890.998 ms     1.408                   0.088  ok
+
+ 310  parallel_quick_sort            4  Str: Mixed Case (n=1,000,000)                      1.242 s     1.000                   0.250  ok
+ 311  parallel_quick_sort            8  Str: Mixed Case (n=1,000,000)                      898.041 ms     1.383                   0.173  ok
+ 312  parallel_quick_sort           16  Str: Mixed Case (n=1,000,000)                      884.926 ms     1.403                   0.088  ok
+
+ 313  parallel_bubble_sort           4  Str: Mixed Case (n=100,000)                            —         —                       —  TIMEOUT
+ 314  parallel_bubble_sort           8  Str: Mixed Case (n=100,000)                            —         —                       —  TIMEOUT
+ 315  parallel_bubble_sort          16  Str: Mixed Case (n=100,000)                        40.703 s         —                       —  ok
+
+ 316  parallel_insertion_sort        4  Str: Mixed Case (n=100,000)                            —         —                       —  TIMEOUT
+ 317  parallel_insertion_sort        8  Str: Mixed Case (n=100,000)                            —         —                       —  TIMEOUT
+ 318  parallel_insertion_sort       16  Str: Mixed Case (n=100,000)                        34.517 s         —                       —  ok
+
+ 319  parallel_merge_sort            4  Str: Mixed Case (n=100,000)                        134.335 ms     1.000                   0.250  ok
+ 320  parallel_merge_sort            8  Str: Mixed Case (n=100,000)                        122.126 ms     1.100                   0.138  ok
+ 321  parallel_merge_sort           16  Str: Mixed Case (n=100,000)                        177.368 ms     0.757                   0.047  ok
+
+ 322  parallel_quick_sort            4  Str: Mixed Case (n=100,000)                        141.849 ms     1.000                   0.250  ok
+ 323  parallel_quick_sort            8  Str: Mixed Case (n=100,000)                        132.234 ms     1.073                   0.134  ok
+ 324  parallel_quick_sort           16  Str: Mixed Case (n=100,000)                        166.514 ms     0.852                   0.053  ok
+
+ 325  parallel_bubble_sort           4  Str: Mixed Case (n=10,000)                         2.281 s     1.000                   0.250  ok
+ 326  parallel_bubble_sort           8  Str: Mixed Case (n=10,000)                         1.552 s     1.470                   0.184  ok
+ 327  parallel_bubble_sort          16  Str: Mixed Case (n=10,000)                         1.098 s     2.078                   0.130  ok
+
+ 328  parallel_insertion_sort        4  Str: Mixed Case (n=10,000)                         6.121 s     1.000                   0.250  ok
+ 329  parallel_insertion_sort        8  Str: Mixed Case (n=10,000)                         1.768 s     3.462                   0.433  ok
+ 330  parallel_insertion_sort       16  Str: Mixed Case (n=10,000)                         897.773 ms     6.818                   0.426  ok
+
+ 331  parallel_merge_sort            4  Str: Mixed Case (n=10,000)                         56.875 ms     1.000                   0.250  ok
+ 332  parallel_merge_sort            8  Str: Mixed Case (n=10,000)                         63.970 ms     0.889                   0.111  ok
+ 333  parallel_merge_sort           16  Str: Mixed Case (n=10,000)                         88.214 ms     0.645                   0.040  ok
+
+ 334  parallel_quick_sort            4  Str: Mixed Case (n=10,000)                         54.679 ms     1.000                   0.250  ok
+ 335  parallel_quick_sort            8  Str: Mixed Case (n=10,000)                         61.538 ms     0.889                   0.111  ok
+ 336  parallel_quick_sort           16  Str: Mixed Case (n=10,000)                         84.960 ms     0.644                   0.040  ok
+
+ 337  parallel_bubble_sort           4  Str: Mixed Case (n=1,000)                          326.251 ms     1.000                   0.250  ok
+ 338  parallel_bubble_sort           8  Str: Mixed Case (n=1,000)                          363.925 ms     0.896                   0.112  ok
+ 339  parallel_bubble_sort          16  Str: Mixed Case (n=1,000)                          280.509 ms     1.163                   0.073  ok
+
+ 340  parallel_insertion_sort        4  Str: Mixed Case (n=1,000)                          252.251 ms     1.000                   0.250  ok
+ 341  parallel_insertion_sort        8  Str: Mixed Case (n=1,000)                          584.289 ms     0.432                   0.054  ok
+ 342  parallel_insertion_sort       16  Str: Mixed Case (n=1,000)                          292.106 ms     0.864                   0.054  ok
+
+ 343  parallel_merge_sort            4  Str: Mixed Case (n=1,000)                          1.127 ms     1.000                   0.250  ok
+ 344  parallel_merge_sort            8  Str: Mixed Case (n=1,000)                          1.140 ms     0.988                   0.123  ok
+ 345  parallel_merge_sort           16  Str: Mixed Case (n=1,000)                          1.224 ms     0.921                   0.058  ok
+
+ 346  parallel_quick_sort            4  Str: Mixed Case (n=1,000)                          1.082 ms     1.000                   0.250  ok
+ 347  parallel_quick_sort            8  Str: Mixed Case (n=1,000)                          1.060 ms     1.022                   0.128  ok
+ 348  parallel_quick_sort           16  Str: Mixed Case (n=1,000)                          1.069 ms     1.013                   0.063  ok
+
+ 349  parallel_bubble_sort           4  Str: Mixed Case (n=20)                             27.331 µs     1.000                   0.250  ok
+ 350  parallel_bubble_sort           8  Str: Mixed Case (n=20)                             27.362 µs     0.999                   0.125  ok
+ 351  parallel_bubble_sort          16  Str: Mixed Case (n=20)                             25.058 µs     1.091                   0.068  ok
+
+ 352  parallel_insertion_sort        4  Str: Mixed Case (n=20)                             15.189 µs     1.000                   0.250  ok
+ 353  parallel_insertion_sort        8  Str: Mixed Case (n=20)                             23.936 µs     0.635                   0.079  ok
+ 354  parallel_insertion_sort       16  Str: Mixed Case (n=20)                             15.709 µs     0.967                   0.060  ok
+
+ 355  parallel_merge_sort            4  Str: Mixed Case (n=20)                             23.604 µs     1.000                   0.250  ok
+ 356  parallel_merge_sort            8  Str: Mixed Case (n=20)                             24.716 µs     0.955                   0.119  ok
+ 357  parallel_merge_sort           16  Str: Mixed Case (n=20)                             23.814 µs     0.991                   0.062  ok
+
+ 358  parallel_quick_sort            4  Str: Mixed Case (n=20)                             18.826 µs     1.000                   0.250  ok
+ 359  parallel_quick_sort            8  Str: Mixed Case (n=20)                             18.655 µs     1.009                   0.126  ok
+ 360  parallel_quick_sort           16  Str: Mixed Case (n=20)                             19.797 µs     0.951                   0.059  ok
+
+ 361  parallel_bubble_sort           4  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+ 362  parallel_bubble_sort           8  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+ 363  parallel_bubble_sort          16  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+
+ 364  parallel_insertion_sort        4  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+ 365  parallel_insertion_sort        8  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+ 366  parallel_insertion_sort       16  Str: Nearly Sorted (n=1,000,000)                       —         —                       —  TIMEOUT
+
+ 367  parallel_merge_sort            4  Str: Nearly Sorted (n=1,000,000)                   1.001 s     1.000                   0.250  ok
+ 368  parallel_merge_sort            8  Str: Nearly Sorted (n=1,000,000)                   828.092 ms     1.209                   0.151  ok
+ 369  parallel_merge_sort           16  Str: Nearly Sorted (n=1,000,000)                   788.066 ms     1.271                   0.079  ok
+
+ 370  parallel_quick_sort            4  Str: Nearly Sorted (n=1,000,000)                   1.422 s     1.000                   0.250  ok
+ 371  parallel_quick_sort            8  Str: Nearly Sorted (n=1,000,000)                   1.082 s     1.314                   0.164  ok
+ 372  parallel_quick_sort           16  Str: Nearly Sorted (n=1,000,000)                   897.451 ms     1.585                   0.099  ok
+
+ 373  parallel_bubble_sort           4  Str: Nearly Sorted (n=100,000)                         —         —                       —  TIMEOUT
+ 374  parallel_bubble_sort           8  Str: Nearly Sorted (n=100,000)                     90.791 s         —                       —  ok
+ 375  parallel_bubble_sort          16  Str: Nearly Sorted (n=100,000)                     26.067 s         —                       —  ok
+
+ 376  parallel_insertion_sort        4  Str: Nearly Sorted (n=100,000)                     13.448 s     1.000                   0.250  ok
+ 377  parallel_insertion_sort        8  Str: Nearly Sorted (n=100,000)                     6.938 s     1.938                   0.242  ok
+ 378  parallel_insertion_sort       16  Str: Nearly Sorted (n=100,000)                     4.355 s     3.088                   0.193  ok
+
+ 379  parallel_merge_sort            4  Str: Nearly Sorted (n=100,000)                     129.021 ms     1.000                   0.250  ok
+ 380  parallel_merge_sort            8  Str: Nearly Sorted (n=100,000)                     122.775 ms     1.051                   0.131  ok
+ 381  parallel_merge_sort           16  Str: Nearly Sorted (n=100,000)                     147.208 ms     0.876                   0.055  ok
+
+ 382  parallel_quick_sort            4  Str: Nearly Sorted (n=100,000)                     164.584 ms     1.000                   0.250  ok
+ 383  parallel_quick_sort            8  Str: Nearly Sorted (n=100,000)                     144.475 ms     1.139                   0.142  ok
+ 384  parallel_quick_sort           16  Str: Nearly Sorted (n=100,000)                     170.011 ms     0.968                   0.060  ok
+
+ 385  parallel_bubble_sort           4  Str: Nearly Sorted (n=10,000)                      4.695 s     1.000                   0.250  ok
+ 386  parallel_bubble_sort           8  Str: Nearly Sorted (n=10,000)                      1.038 s     4.524                   0.566  ok
+ 387  parallel_bubble_sort          16  Str: Nearly Sorted (n=10,000)                      593.993 ms     7.904                   0.494  ok
+
+ 388  parallel_insertion_sort        4  Str: Nearly Sorted (n=10,000)                      1.755 s     1.000                   0.250  ok
+ 389  parallel_insertion_sort        8  Str: Nearly Sorted (n=10,000)                      310.972 ms     5.645                   0.706  ok
+ 390  parallel_insertion_sort       16  Str: Nearly Sorted (n=10,000)                      825.182 ms     2.127                   0.133  ok
+
+ 391  parallel_merge_sort            4  Str: Nearly Sorted (n=10,000)                      54.123 ms     1.000                   0.250  ok
+ 392  parallel_merge_sort            8  Str: Nearly Sorted (n=10,000)                      56.871 ms     0.952                   0.119  ok
+ 393  parallel_merge_sort           16  Str: Nearly Sorted (n=10,000)                      80.392 ms     0.673                   0.042  ok
+
+ 394  parallel_quick_sort            4  Str: Nearly Sorted (n=10,000)                      58.382 ms     1.000                   0.250  ok
+ 395  parallel_quick_sort            8  Str: Nearly Sorted (n=10,000)                      61.698 ms     0.946                   0.118  ok
+ 396  parallel_quick_sort           16  Str: Nearly Sorted (n=10,000)                      87.338 ms     0.668                   0.042  ok
+
+ 397  parallel_bubble_sort           4  Str: Nearly Sorted (n=1,000)                       221.116 ms     1.000                   0.250  ok
+ 398  parallel_bubble_sort           8  Str: Nearly Sorted (n=1,000)                       156.592 ms     1.412                   0.176  ok
+ 399  parallel_bubble_sort          16  Str: Nearly Sorted (n=1,000)                       523.019 ms     0.423                   0.026  ok
+
+ 400  parallel_insertion_sort        4  Str: Nearly Sorted (n=1,000)                       183.107 ms     1.000                   0.250  ok
+ 401  parallel_insertion_sort        8  Str: Nearly Sorted (n=1,000)                       621.936 ms     0.294                   0.037  ok
+ 402  parallel_insertion_sort       16  Str: Nearly Sorted (n=1,000)                       243.440 ms     0.752                   0.047  ok
+
+ 403  parallel_merge_sort            4  Str: Nearly Sorted (n=1,000)                       923.159 µs     1.000                   0.250  ok
+ 404  parallel_merge_sort            8  Str: Nearly Sorted (n=1,000)                       923.369 µs     1.000                   0.125  ok
+ 405  parallel_merge_sort           16  Str: Nearly Sorted (n=1,000)                       912.369 µs     1.012                   0.063  ok
+
+ 406  parallel_quick_sort            4  Str: Nearly Sorted (n=1,000)                       1.260 ms     1.000                   0.250  ok
+ 407  parallel_quick_sort            8  Str: Nearly Sorted (n=1,000)                       1.738 ms     0.725                   0.091  ok
+ 408  parallel_quick_sort           16  Str: Nearly Sorted (n=1,000)                       1.253 ms     1.006                   0.063  ok
+
+ 409  parallel_bubble_sort           4  Str: Nearly Sorted (n=20)                          20.870 µs     1.000                   0.250  ok
+ 410  parallel_bubble_sort           8  Str: Nearly Sorted (n=20)                          20.468 µs     1.020                   0.128  ok
+ 411  parallel_bubble_sort          16  Str: Nearly Sorted (n=20)                          20.118 µs     1.037                   0.065  ok
+
+ 412  parallel_insertion_sort        4  Str: Nearly Sorted (n=20)                          10.499 µs     1.000                   0.250  ok
+ 413  parallel_insertion_sort        8  Str: Nearly Sorted (n=20)                          10.620 µs     0.989                   0.124  ok
+ 414  parallel_insertion_sort       16  Str: Nearly Sorted (n=20)                          9.067 µs     1.158                   0.072  ok
+
+ 415  parallel_merge_sort            4  Str: Nearly Sorted (n=20)                          23.253 µs     1.000                   0.250  ok
+ 416  parallel_merge_sort            8  Str: Nearly Sorted (n=20)                          23.093 µs     1.007                   0.126  ok
+ 417  parallel_merge_sort           16  Str: Nearly Sorted (n=20)                          22.843 µs     1.018                   0.064  ok
+
+ 418  parallel_quick_sort            4  Str: Nearly Sorted (n=20)                          17.102 µs     1.000                   0.250  ok
+ 419  parallel_quick_sort            8  Str: Nearly Sorted (n=20)                          16.531 µs     1.035                   0.129  ok
+ 420  parallel_quick_sort           16  Str: Nearly Sorted (n=20)                          16.791 µs     1.019                   0.064  ok
+
+ 421  parallel_bubble_sort           4  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 422  parallel_bubble_sort           8  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 423  parallel_bubble_sort          16  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+
+ 424  parallel_insertion_sort        4  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 425  parallel_insertion_sort        8  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+ 426  parallel_insertion_sort       16  Str: Random (n=1,000,000)                              —         —                       —  TIMEOUT
+
+ 427  parallel_merge_sort            4  Str: Random (n=1,000,000)                          1.249 s     1.000                   0.250  ok
+ 428  parallel_merge_sort            8  Str: Random (n=1,000,000)                          958.865 ms     1.302                   0.163  ok
+ 429  parallel_merge_sort           16  Str: Random (n=1,000,000)                          903.070 ms     1.383                   0.086  ok
+
+ 430  parallel_quick_sort            4  Str: Random (n=1,000,000)                          1.226 s     1.000                   0.250  ok
+ 431  parallel_quick_sort            8  Str: Random (n=1,000,000)                          935.887 ms     1.310                   0.164  ok
+ 432  parallel_quick_sort           16  Str: Random (n=1,000,000)                          853.968 ms     1.436                   0.090  ok
+
+ 433  parallel_bubble_sort           4  Str: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 434  parallel_bubble_sort           8  Str: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 435  parallel_bubble_sort          16  Str: Random (n=100,000)                            52.439 s         —                       —  ok
+
+ 436  parallel_insertion_sort        4  Str: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 437  parallel_insertion_sort        8  Str: Random (n=100,000)                                —         —                       —  TIMEOUT
+ 438  parallel_insertion_sort       16  Str: Random (n=100,000)                            37.875 s         —                       —  ok
+
+ 439  parallel_merge_sort            4  Str: Random (n=100,000)                            142.112 ms     1.000                   0.250  ok
+ 440  parallel_merge_sort            8  Str: Random (n=100,000)                            140.042 ms     1.015                   0.127  ok
+ 441  parallel_merge_sort           16  Str: Random (n=100,000)                            153.823 ms     0.924                   0.058  ok
+
+ 442  parallel_quick_sort            4  Str: Random (n=100,000)                            141.508 ms     1.000                   0.250  ok
+ 443  parallel_quick_sort            8  Str: Random (n=100,000)                            146.059 ms     0.969                   0.121  ok
+ 444  parallel_quick_sort           16  Str: Random (n=100,000)                            178.832 ms     0.791                   0.049  ok
+
+ 445  parallel_bubble_sort           4  Str: Random (n=10,000)                             7.760 s     1.000                   0.250  ok
+ 446  parallel_bubble_sort           8  Str: Random (n=10,000)                             1.064 s     7.294                   0.912  ok
+ 447  parallel_bubble_sort          16  Str: Random (n=10,000)                             1.744 s     4.449                   0.278  ok
+
+ 448  parallel_insertion_sort        4  Str: Random (n=10,000)                             4.163 s     1.000                   0.250  ok
+ 449  parallel_insertion_sort        8  Str: Random (n=10,000)                             1.549 s     2.687                   0.336  ok
+ 450  parallel_insertion_sort       16  Str: Random (n=10,000)                             1.183 s     3.519                   0.220  ok
+
+ 451  parallel_merge_sort            4  Str: Random (n=10,000)                             51.708 ms     1.000                   0.250  ok
+ 452  parallel_merge_sort            8  Str: Random (n=10,000)                             58.945 ms     0.877                   0.110  ok
+ 453  parallel_merge_sort           16  Str: Random (n=10,000)                             83.061 ms     0.623                   0.039  ok
+
+ 454  parallel_quick_sort            4  Str: Random (n=10,000)                             58.661 ms     1.000                   0.250  ok
+ 455  parallel_quick_sort            8  Str: Random (n=10,000)                             59.663 ms     0.983                   0.123  ok
+ 456  parallel_quick_sort           16  Str: Random (n=10,000)                             85.599 ms     0.685                   0.043  ok
+
+ 457  parallel_bubble_sort           4  Str: Random (n=1,000)                              276.419 ms     1.000                   0.250  ok
+ 458  parallel_bubble_sort           8  Str: Random (n=1,000)                              219.746 ms     1.258                   0.157  ok
+ 459  parallel_bubble_sort          16  Str: Random (n=1,000)                              274.466 ms     1.007                   0.063  ok
+
+ 460  parallel_insertion_sort        4  Str: Random (n=1,000)                              2.050 s     1.000                   0.250  ok
+ 461  parallel_insertion_sort        8  Str: Random (n=1,000)                              458.049 ms     4.475                   0.559  ok
+ 462  parallel_insertion_sort       16  Str: Random (n=1,000)                              537.065 ms     3.817                   0.239  ok
+
+ 463  parallel_merge_sort            4  Str: Random (n=1,000)                              1.125 ms     1.000                   0.250  ok
+ 464  parallel_merge_sort            8  Str: Random (n=1,000)                              1.168 ms     0.963                   0.120  ok
+ 465  parallel_merge_sort           16  Str: Random (n=1,000)                              1.130 ms     0.996                   0.062  ok
+
+ 466  parallel_quick_sort            4  Str: Random (n=1,000)                              1.072 ms     1.000                   0.250  ok
+ 467  parallel_quick_sort            8  Str: Random (n=1,000)                              1.077 ms     0.995                   0.124  ok
+ 468  parallel_quick_sort           16  Str: Random (n=1,000)                              1.068 ms     1.003                   0.063  ok
+
+ 469  parallel_bubble_sort           4  Str: Random (n=20)                                 26.910 µs     1.000                   0.250  ok
+ 470  parallel_bubble_sort           8  Str: Random (n=20)                                 27.863 µs     0.966                   0.121  ok
+ 471  parallel_bubble_sort          16  Str: Random (n=20)                                 79.530 µs     0.338                   0.021  ok
+
+ 472  parallel_insertion_sort        4  Str: Random (n=20)                                 16.651 µs     1.000                   0.250  ok
+ 473  parallel_insertion_sort        8  Str: Random (n=20)                                 14.828 µs     1.123                   0.140  ok
+ 474  parallel_insertion_sort       16  Str: Random (n=20)                                 17.563 µs     0.948                   0.059  ok
+
+ 475  parallel_merge_sort            4  Str: Random (n=20)                                 22.482 µs     1.000                   0.250  ok
+ 476  parallel_merge_sort            8  Str: Random (n=20)                                 22.682 µs     0.991                   0.124  ok
+ 477  parallel_merge_sort           16  Str: Random (n=20)                                 22.653 µs     0.992                   0.062  ok
+
+ 478  parallel_quick_sort            4  Str: Random (n=20)                                 22.782 µs     1.000                   0.250  ok
+ 479  parallel_quick_sort            8  Str: Random (n=20)                                 16.782 µs     1.358                   0.170  ok
+ 480  parallel_quick_sort           16  Str: Random (n=20)                                 17.182 µs     1.326                   0.083  ok
+
+ 481  parallel_bubble_sort           4  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 482  parallel_bubble_sort           8  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 483  parallel_bubble_sort          16  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+
+ 484  parallel_insertion_sort        4  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 485  parallel_insertion_sort        8  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+ 486  parallel_insertion_sort       16  Str: Reverse (n=1,000,000)                             —         —                       —  TIMEOUT
+
+ 487  parallel_merge_sort            4  Str: Reverse (n=1,000,000)                         916.035 ms     1.000                   0.250  ok
+ 488  parallel_merge_sort            8  Str: Reverse (n=1,000,000)                         713.044 ms     1.285                   0.161  ok
+ 489  parallel_merge_sort           16  Str: Reverse (n=1,000,000)                         670.966 ms     1.365                   0.085  ok
+
+ 490  parallel_quick_sort            4  Str: Reverse (n=1,000,000)                         4.912 s     1.000                   0.250  ok
+ 491  parallel_quick_sort            8  Str: Reverse (n=1,000,000)                         2.472 s     1.987                   0.248  ok
+ 492  parallel_quick_sort           16  Str: Reverse (n=1,000,000)                         1.766 s     2.782                   0.174  ok
+
+ 493  parallel_bubble_sort           4  Str: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 494  parallel_bubble_sort           8  Str: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 495  parallel_bubble_sort          16  Str: Reverse (n=100,000)                           55.488 s         —                       —  ok
+
+ 496  parallel_insertion_sort        4  Str: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 497  parallel_insertion_sort        8  Str: Reverse (n=100,000)                               —         —                       —  TIMEOUT
+ 498  parallel_insertion_sort       16  Str: Reverse (n=100,000)                           64.530 s         —                       —  ok
+
+ 499  parallel_merge_sort            4  Str: Reverse (n=100,000)                           121.745 ms     1.000                   0.250  ok
+ 500  parallel_merge_sort            8  Str: Reverse (n=100,000)                           117.078 ms     1.040                   0.130  ok
+ 501  parallel_merge_sort           16  Str: Reverse (n=100,000)                           145.918 ms     0.834                   0.052  ok
+
+ 502  parallel_quick_sort            4  Str: Reverse (n=100,000)                           256.966 ms     1.000                   0.250  ok
+ 503  parallel_quick_sort            8  Str: Reverse (n=100,000)                           185.899 ms     1.382                   0.173  ok
+ 504  parallel_quick_sort           16  Str: Reverse (n=100,000)                           186.786 ms     1.376                   0.086  ok
+
+ 505  parallel_bubble_sort           4  Str: Reverse (n=10,000)                            6.866 s     1.000                   0.250  ok
+ 506  parallel_bubble_sort           8  Str: Reverse (n=10,000)                            1.980 s     3.468                   0.433  ok
+ 507  parallel_bubble_sort          16  Str: Reverse (n=10,000)                            1.103 s     6.223                   0.389  ok
+
+ 508  parallel_insertion_sort        4  Str: Reverse (n=10,000)                            10.362 s     1.000                   0.250  ok
+ 509  parallel_insertion_sort        8  Str: Reverse (n=10,000)                            1.721 s     6.023                   0.753  ok
+ 510  parallel_insertion_sort       16  Str: Reverse (n=10,000)                            2.274 s     4.557                   0.285  ok
+
+ 511  parallel_merge_sort            4  Str: Reverse (n=10,000)                            53.982 ms     1.000                   0.250  ok
+ 512  parallel_merge_sort            8  Str: Reverse (n=10,000)                            59.231 ms     0.911                   0.114  ok
+ 513  parallel_merge_sort           16  Str: Reverse (n=10,000)                            88.236 ms     0.612                   0.038  ok
+
+ 514  parallel_quick_sort            4  Str: Reverse (n=10,000)                            57.925 ms     1.000                   0.250  ok
+ 515  parallel_quick_sort            8  Str: Reverse (n=10,000)                            63.345 ms     0.914                   0.114  ok
+ 516  parallel_quick_sort           16  Str: Reverse (n=10,000)                            85.030 ms     0.681                   0.043  ok
+
+ 517  parallel_bubble_sort           4  Str: Reverse (n=1,000)                             485.588 ms     1.000                   0.250  ok
+ 518  parallel_bubble_sort           8  Str: Reverse (n=1,000)                             320.379 ms     1.516                   0.190  ok
+ 519  parallel_bubble_sort          16  Str: Reverse (n=1,000)                             360.286 ms     1.348                   0.084  ok
+
+ 520  parallel_insertion_sort        4  Str: Reverse (n=1,000)                             439.705 ms     1.000                   0.250  ok
+ 521  parallel_insertion_sort        8  Str: Reverse (n=1,000)                             349.667 ms     1.257                   0.157  ok
+ 522  parallel_insertion_sort       16  Str: Reverse (n=1,000)                             551.672 ms     0.797                   0.050  ok
+
+ 523  parallel_merge_sort            4  Str: Reverse (n=1,000)                             810.908 µs     1.000                   0.250  ok
+ 524  parallel_merge_sort            8  Str: Reverse (n=1,000)                             813.814 µs     0.996                   0.124  ok
+ 525  parallel_merge_sort           16  Str: Reverse (n=1,000)                             829.813 µs     0.977                   0.061  ok
+
+ 526  parallel_quick_sort            4  Str: Reverse (n=1,000)                             1.479 ms     1.000                   0.250  ok
+ 527  parallel_quick_sort            8  Str: Reverse (n=1,000)                             1.553 ms     0.952                   0.119  ok
+ 528  parallel_quick_sort           16  Str: Reverse (n=1,000)                             1.501 ms     0.985                   0.062  ok
+
+ 529  parallel_bubble_sort           4  Str: Reverse (n=20)                                30.648 µs     1.000                   0.250  ok
+ 530  parallel_bubble_sort           8  Str: Reverse (n=20)                                35.056 µs     0.874                   0.109  ok
+ 531  parallel_bubble_sort          16  Str: Reverse (n=20)                                32.291 µs     0.949                   0.059  ok
+
+ 532  parallel_insertion_sort        4  Str: Reverse (n=20)                                23.143 µs     1.000                   0.250  ok
+ 533  parallel_insertion_sort        8  Str: Reverse (n=20)                                22.873 µs     1.012                   0.127  ok
+ 534  parallel_insertion_sort       16  Str: Reverse (n=20)                                21.641 µs     1.069                   0.067  ok
+
+ 535  parallel_merge_sort            4  Str: Reverse (n=20)                                22.362 µs     1.000                   0.250  ok
+ 536  parallel_merge_sort            8  Str: Reverse (n=20)                                48.180 µs     0.464                   0.058  ok
+ 537  parallel_merge_sort           16  Str: Reverse (n=20)                                20.228 µs     1.105                   0.069  ok
+
+ 538  parallel_quick_sort            4  Str: Reverse (n=20)                                16.391 µs     1.000                   0.250  ok
+ 539  parallel_quick_sort            8  Str: Reverse (n=20)                                17.032 µs     0.962                   0.120  ok
+ 540  parallel_quick_sort           16  Str: Reverse (n=20)                                15.019 µs     1.091                   0.068  ok
+
+ 541  parallel_bubble_sort           4  Str: Sorted (n=1,000,000)                          6.112 s     1.000                   0.250  ok
+ 542  parallel_bubble_sort           8  Str: Sorted (n=1,000,000)                          4.790 s     1.276                   0.160  ok
+ 543  parallel_bubble_sort          16  Str: Sorted (n=1,000,000)                          4.831 s     1.265                   0.079  ok
+
+ 544  parallel_insertion_sort        4  Str: Sorted (n=1,000,000)                          10.944 s     1.000                   0.250  ok
+ 545  parallel_insertion_sort        8  Str: Sorted (n=1,000,000)                          6.033 s     1.814                   0.227  ok
+ 546  parallel_insertion_sort       16  Str: Sorted (n=1,000,000)                          15.229 s     0.719                   0.045  ok
+
+ 547  parallel_merge_sort            4  Str: Sorted (n=1,000,000)                          845.098 ms     1.000                   0.250  ok
+ 548  parallel_merge_sort            8  Str: Sorted (n=1,000,000)                          668.528 ms     1.264                   0.158  ok
+ 549  parallel_merge_sort           16  Str: Sorted (n=1,000,000)                          672.844 ms     1.256                   0.079  ok
+
+ 550  parallel_quick_sort            4  Str: Sorted (n=1,000,000)                          6.620 s     1.000                   0.250  ok
+ 551  parallel_quick_sort            8  Str: Sorted (n=1,000,000)                          3.373 s     1.962                   0.245  ok
+ 552  parallel_quick_sort           16  Str: Sorted (n=1,000,000)                          2.262 s     2.927                   0.183  ok
+
+ 553  parallel_bubble_sort           4  Str: Sorted (n=100,000)                            793.119 ms     1.000                   0.250  ok
+ 554  parallel_bubble_sort           8  Str: Sorted (n=100,000)                            699.405 ms     1.134                   0.142  ok
+ 555  parallel_bubble_sort          16  Str: Sorted (n=100,000)                            619.252 ms     1.281                   0.080  ok
+
+ 556  parallel_insertion_sort        4  Str: Sorted (n=100,000)                            832.673 ms     1.000                   0.250  ok
+ 557  parallel_insertion_sort        8  Str: Sorted (n=100,000)                            869.787 ms     0.957                   0.120  ok
+ 558  parallel_insertion_sort       16  Str: Sorted (n=100,000)                            1.006 s     0.827                   0.052  ok
+
+ 559  parallel_merge_sort            4  Str: Sorted (n=100,000)                            115.465 ms     1.000                   0.250  ok
+ 560  parallel_merge_sort            8  Str: Sorted (n=100,000)                            116.871 ms     0.988                   0.123  ok
+ 561  parallel_merge_sort           16  Str: Sorted (n=100,000)                            143.108 ms     0.807                   0.050  ok
+
+ 562  parallel_quick_sort            4  Str: Sorted (n=100,000)                            290.207 ms     1.000                   0.250  ok
+ 563  parallel_quick_sort            8  Str: Sorted (n=100,000)                            194.937 ms     1.489                   0.186  ok
+ 564  parallel_quick_sort           16  Str: Sorted (n=100,000)                            195.649 ms     1.483                   0.093  ok
+
+ 565  parallel_bubble_sort           4  Str: Sorted (n=10,000)                             210.163 ms     1.000                   0.250  ok
+ 566  parallel_bubble_sort           8  Str: Sorted (n=10,000)                             229.563 ms     0.915                   0.114  ok
+ 567  parallel_bubble_sort          16  Str: Sorted (n=10,000)                             691.289 ms     0.304                   0.019  ok
+
+ 568  parallel_insertion_sort        4  Str: Sorted (n=10,000)                             254.447 ms     1.000                   0.250  ok
+ 569  parallel_insertion_sort        8  Str: Sorted (n=10,000)                             282.598 ms     0.900                   0.113  ok
+ 570  parallel_insertion_sort       16  Str: Sorted (n=10,000)                             608.599 ms     0.418                   0.026  ok
+
+ 571  parallel_merge_sort            4  Str: Sorted (n=10,000)                             56.660 ms     1.000                   0.250  ok
+ 572  parallel_merge_sort            8  Str: Sorted (n=10,000)                             63.966 ms     0.886                   0.111  ok
+ 573  parallel_merge_sort           16  Str: Sorted (n=10,000)                             86.749 ms     0.653                   0.041  ok
+
+ 574  parallel_quick_sort            4  Str: Sorted (n=10,000)                             60.339 ms     1.000                   0.250  ok
+ 575  parallel_quick_sort            8  Str: Sorted (n=10,000)                             63.026 ms     0.957                   0.120  ok
+ 576  parallel_quick_sort           16  Str: Sorted (n=10,000)                             92.007 ms     0.656                   0.041  ok
+
+ 577  parallel_bubble_sort           4  Str: Sorted (n=1,000)                              156.225 ms     1.000                   0.250  ok
+ 578  parallel_bubble_sort           8  Str: Sorted (n=1,000)                              191.449 ms     0.816                   0.102  ok
+ 579  parallel_bubble_sort          16  Str: Sorted (n=1,000)                              284.249 ms     0.550                   0.034  ok
+
+ 580  parallel_insertion_sort        4  Str: Sorted (n=1,000)                              184.630 ms     1.000                   0.250  ok
+ 581  parallel_insertion_sort        8  Str: Sorted (n=1,000)                              355.766 ms     0.519                   0.065  ok
+ 582  parallel_insertion_sort       16  Str: Sorted (n=1,000)                              579.591 ms     0.319                   0.020  ok
+
+ 583  parallel_merge_sort            4  Str: Sorted (n=1,000)                              830.254 µs     1.000                   0.250  ok
+ 584  parallel_merge_sort            8  Str: Sorted (n=1,000)                              811.099 µs     1.024                   0.128  ok
+ 585  parallel_merge_sort           16  Str: Sorted (n=1,000)                              809.395 µs     1.026                   0.064  ok
+
+ 586  parallel_quick_sort            4  Str: Sorted (n=1,000)                              2.832 ms     1.000                   0.250  ok
+ 587  parallel_quick_sort            8  Str: Sorted (n=1,000)                              1.851 ms     1.530                   0.191  ok
+ 588  parallel_quick_sort           16  Str: Sorted (n=1,000)                              1.884 ms     1.503                   0.094  ok
+
+ 589  parallel_bubble_sort           4  Str: Sorted (n=20)                                 5.260 µs     1.000                   0.250  ok
+ 590  parallel_bubble_sort           8  Str: Sorted (n=20)                                 5.550 µs     0.948                   0.118  ok
+ 591  parallel_bubble_sort          16  Str: Sorted (n=20)                                 7.163 µs     0.734                   0.046  ok
+
+ 592  parallel_insertion_sort        4  Str: Sorted (n=20)                                 6.873 µs     1.000                   0.250  ok
+ 593  parallel_insertion_sort        8  Str: Sorted (n=20)                                 6.883 µs     0.999                   0.125  ok
+ 594  parallel_insertion_sort       16  Str: Sorted (n=20)                                 6.933 µs     0.991                   0.062  ok
+
+ 595  parallel_merge_sort            4  Str: Sorted (n=20)                                 20.378 µs     1.000                   0.250  ok
+ 596  parallel_merge_sort            8  Str: Sorted (n=20)                                 26.871 µs     0.758                   0.095  ok
+ 597  parallel_merge_sort           16  Str: Sorted (n=20)                                 20.138 µs     1.012                   0.063  ok
+
+ 598  parallel_quick_sort            4  Str: Sorted (n=20)                                 16.732 µs     1.000                   0.250  ok
+ 599  parallel_quick_sort            8  Str: Sorted (n=20)                                 16.490 µs     1.015                   0.127  ok
+ 600  parallel_quick_sort           16  Str: Sorted (n=20)                                 16.691 µs     1.002                   0.063  ok
+
+ 601  parallel_bubble_sort           4  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+ 602  parallel_bubble_sort           8  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+ 603  parallel_bubble_sort          16  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+
+ 604  parallel_insertion_sort        4  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+ 605  parallel_insertion_sort        8  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+ 606  parallel_insertion_sort       16  Tuple: Dup Scores (n=1,000,000)                        —         —                       —  TIMEOUT
+
+ 607  parallel_merge_sort            4  Tuple: Dup Scores (n=1,000,000)                    1.928 s     1.000                   0.250  ok
+ 608  parallel_merge_sort            8  Tuple: Dup Scores (n=1,000,000)                    1.432 s     1.346                   0.168  ok
+ 609  parallel_merge_sort           16  Tuple: Dup Scores (n=1,000,000)                    1.335 s     1.444                   0.090  ok
+
+ 610  parallel_quick_sort            4  Tuple: Dup Scores (n=1,000,000)                    2.005 s     1.000                   0.250  ok
+ 611  parallel_quick_sort            8  Tuple: Dup Scores (n=1,000,000)                    1.404 s     1.429                   0.179  ok
+ 612  parallel_quick_sort           16  Tuple: Dup Scores (n=1,000,000)                    1.340 s     1.497                   0.094  ok
+
+ 613  parallel_bubble_sort           4  Tuple: Dup Scores (n=100,000)                          —         —                       —  TIMEOUT
+ 614  parallel_bubble_sort           8  Tuple: Dup Scores (n=100,000)                          —         —                       —  TIMEOUT
+ 615  parallel_bubble_sort          16  Tuple: Dup Scores (n=100,000)                      64.784 s         —                       —  ok
+
+ 616  parallel_insertion_sort        4  Tuple: Dup Scores (n=100,000)                          —         —                       —  TIMEOUT
+ 617  parallel_insertion_sort        8  Tuple: Dup Scores (n=100,000)                          —         —                       —  TIMEOUT
+ 618  parallel_insertion_sort       16  Tuple: Dup Scores (n=100,000)                      48.139 s         —                       —  ok
+
+ 619  parallel_merge_sort            4  Tuple: Dup Scores (n=100,000)                      178.248 ms     1.000                   0.250  ok
+ 620  parallel_merge_sort            8  Tuple: Dup Scores (n=100,000)                      166.156 ms     1.073                   0.134  ok
+ 621  parallel_merge_sort           16  Tuple: Dup Scores (n=100,000)                      201.404 ms     0.885                   0.055  ok
+
+ 622  parallel_quick_sort            4  Tuple: Dup Scores (n=100,000)                      179.055 ms     1.000                   0.250  ok
+ 623  parallel_quick_sort            8  Tuple: Dup Scores (n=100,000)                      178.194 ms     1.005                   0.126  ok
+ 624  parallel_quick_sort           16  Tuple: Dup Scores (n=100,000)                      198.722 ms     0.901                   0.056  ok
+
+ 625  parallel_bubble_sort           4  Tuple: Dup Scores (n=10,000)                       8.407 s     1.000                   0.250  ok
+ 626  parallel_bubble_sort           8  Tuple: Dup Scores (n=10,000)                       3.174 s     2.649                   0.331  ok
+ 627  parallel_bubble_sort          16  Tuple: Dup Scores (n=10,000)                       1.606 s     5.236                   0.327  ok
+
+ 628  parallel_insertion_sort        4  Tuple: Dup Scores (n=10,000)                       7.554 s     1.000                   0.250  ok
+ 629  parallel_insertion_sort        8  Tuple: Dup Scores (n=10,000)                       1.961 s     3.852                   0.481  ok
+ 630  parallel_insertion_sort       16  Tuple: Dup Scores (n=10,000)                       1.036 s     7.290                   0.456  ok
+
+ 631  parallel_merge_sort            4  Tuple: Dup Scores (n=10,000)                       58.423 ms     1.000                   0.250  ok
+ 632  parallel_merge_sort            8  Tuple: Dup Scores (n=10,000)                       69.129 ms     0.845                   0.106  ok
+ 633  parallel_merge_sort           16  Tuple: Dup Scores (n=10,000)                       91.023 ms     0.642                   0.040  ok
+
+ 634  parallel_quick_sort            4  Tuple: Dup Scores (n=10,000)                       57.969 ms     1.000                   0.250  ok
+ 635  parallel_quick_sort            8  Tuple: Dup Scores (n=10,000)                       64.240 ms     0.902                   0.113  ok
+ 636  parallel_quick_sort           16  Tuple: Dup Scores (n=10,000)                       93.283 ms     0.621                   0.039  ok
+
+ 637  parallel_bubble_sort           4  Tuple: Dup Scores (n=1,000)                        197.879 ms     1.000                   0.250  ok
+ 638  parallel_bubble_sort           8  Tuple: Dup Scores (n=1,000)                        473.363 ms     0.418                   0.052  ok
+ 639  parallel_bubble_sort          16  Tuple: Dup Scores (n=1,000)                        448.626 ms     0.441                   0.028  ok
+
+ 640  parallel_insertion_sort        4  Tuple: Dup Scores (n=1,000)                        1.511 s     1.000                   0.250  ok
+ 641  parallel_insertion_sort        8  Tuple: Dup Scores (n=1,000)                        416.389 ms     3.628                   0.454  ok
+ 642  parallel_insertion_sort       16  Tuple: Dup Scores (n=1,000)                        647.855 ms     2.332                   0.146  ok
+
+ 643  parallel_merge_sort            4  Tuple: Dup Scores (n=1,000)                        1.279 ms     1.000                   0.250  ok
+ 644  parallel_merge_sort            8  Tuple: Dup Scores (n=1,000)                        1.244 ms     1.028                   0.129  ok
+ 645  parallel_merge_sort           16  Tuple: Dup Scores (n=1,000)                        1.245 ms     1.027                   0.064  ok
+
+ 646  parallel_quick_sort            4  Tuple: Dup Scores (n=1,000)                        1.289 ms     1.000                   0.250  ok
+ 647  parallel_quick_sort            8  Tuple: Dup Scores (n=1,000)                        1.386 ms     0.930                   0.116  ok
+ 648  parallel_quick_sort           16  Tuple: Dup Scores (n=1,000)                        1.293 ms     0.997                   0.062  ok
+
+ 649  parallel_bubble_sort           4  Tuple: Dup Scores (n=20)                           27.331 µs     1.000                   0.250  ok
+ 650  parallel_bubble_sort           8  Tuple: Dup Scores (n=20)                           25.888 µs     1.056                   0.132  ok
+ 651  parallel_bubble_sort          16  Tuple: Dup Scores (n=20)                           29.907 µs     0.914                   0.057  ok
+
+ 652  parallel_insertion_sort        4  Tuple: Dup Scores (n=20)                           17.333 µs     1.000                   0.250  ok
+ 653  parallel_insertion_sort        8  Tuple: Dup Scores (n=20)                           18.434 µs     0.940                   0.117  ok
+ 654  parallel_insertion_sort       16  Tuple: Dup Scores (n=20)                           16.280 µs     1.065                   0.067  ok
+
+ 655  parallel_merge_sort            4  Tuple: Dup Scores (n=20)                           27.602 µs     1.000                   0.250  ok
+ 656  parallel_merge_sort            8  Tuple: Dup Scores (n=20)                           24.005 µs     1.150                   0.144  ok
+ 657  parallel_merge_sort           16  Tuple: Dup Scores (n=20)                           24.616 µs     1.121                   0.070  ok
+
+ 658  parallel_quick_sort            4  Tuple: Dup Scores (n=20)                           19.316 µs     1.000                   0.250  ok
+ 659  parallel_quick_sort            8  Tuple: Dup Scores (n=20)                           18.575 µs     1.040                   0.130  ok
+ 660  parallel_quick_sort           16  Tuple: Dup Scores (n=20)                           19.136 µs     1.009                   0.063  ok
+
+ 661  parallel_bubble_sort           4  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+ 662  parallel_bubble_sort           8  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+ 663  parallel_bubble_sort          16  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+
+ 664  parallel_insertion_sort        4  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+ 665  parallel_insertion_sort        8  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+ 666  parallel_insertion_sort       16  Tuple: Nearly Sorted (n=1,000,000)                     —         —                       —  TIMEOUT
+
+ 667  parallel_merge_sort            4  Tuple: Nearly Sorted (n=1,000,000)                 1.652 s     1.000                   0.250  ok
+ 668  parallel_merge_sort            8  Tuple: Nearly Sorted (n=1,000,000)                 1.286 s     1.285                   0.161  ok
+ 669  parallel_merge_sort           16  Tuple: Nearly Sorted (n=1,000,000)                 1.222 s     1.351                   0.084  ok
+
+ 670  parallel_quick_sort            4  Tuple: Nearly Sorted (n=1,000,000)                 2.011 s     1.000                   0.250  ok
+ 671  parallel_quick_sort            8  Tuple: Nearly Sorted (n=1,000,000)                 1.563 s     1.287                   0.161  ok
+ 672  parallel_quick_sort           16  Tuple: Nearly Sorted (n=1,000,000)                 1.317 s     1.527                   0.095  ok
+
+ 673  parallel_bubble_sort           4  Tuple: Nearly Sorted (n=100,000)                       —         —                       —  TIMEOUT
+ 674  parallel_bubble_sort           8  Tuple: Nearly Sorted (n=100,000)                       —         —                       —  TIMEOUT
+ 675  parallel_bubble_sort          16  Tuple: Nearly Sorted (n=100,000)                   45.238 s         —                       —  ok
+
+ 676  parallel_insertion_sort        4  Tuple: Nearly Sorted (n=100,000)                   24.684 s     1.000                   0.250  ok
+ 677  parallel_insertion_sort        8  Tuple: Nearly Sorted (n=100,000)                   5.883 s     4.196                   0.524  ok
+ 678  parallel_insertion_sort       16  Tuple: Nearly Sorted (n=100,000)                   3.039 s     8.122                   0.508  ok
+
+ 679  parallel_merge_sort            4  Tuple: Nearly Sorted (n=100,000)                   152.797 ms     1.000                   0.250  ok
+ 680  parallel_merge_sort            8  Tuple: Nearly Sorted (n=100,000)                   142.439 ms     1.073                   0.134  ok
+ 681  parallel_merge_sort           16  Tuple: Nearly Sorted (n=100,000)                   198.173 ms     0.771                   0.048  ok
+
+ 682  parallel_quick_sort            4  Tuple: Nearly Sorted (n=100,000)                   183.547 ms     1.000                   0.250  ok
+ 683  parallel_quick_sort            8  Tuple: Nearly Sorted (n=100,000)                   184.135 ms     0.997                   0.125  ok
+ 684  parallel_quick_sort           16  Tuple: Nearly Sorted (n=100,000)                   212.215 ms     0.865                   0.054  ok
+
+ 685  parallel_bubble_sort           4  Tuple: Nearly Sorted (n=10,000)                    9.894 s     1.000                   0.250  ok
+ 686  parallel_bubble_sort           8  Tuple: Nearly Sorted (n=10,000)                    3.724 s     2.656                   0.332  ok
+ 687  parallel_bubble_sort          16  Tuple: Nearly Sorted (n=10,000)                    609.716 ms    16.227                   1.014  ok
+
+ 688  parallel_insertion_sort        4  Tuple: Nearly Sorted (n=10,000)                    354.053 ms     1.000                   0.250  ok
+ 689  parallel_insertion_sort        8  Tuple: Nearly Sorted (n=10,000)                    511.979 ms     0.692                   0.086  ok
+ 690  parallel_insertion_sort       16  Tuple: Nearly Sorted (n=10,000)                    728.027 ms     0.486                   0.030  ok
+
+ 691  parallel_merge_sort            4  Tuple: Nearly Sorted (n=10,000)                    59.209 ms     1.000                   0.250  ok
+ 692  parallel_merge_sort            8  Tuple: Nearly Sorted (n=10,000)                    60.658 ms     0.976                   0.122  ok
+ 693  parallel_merge_sort           16  Tuple: Nearly Sorted (n=10,000)                    92.824 ms     0.638                   0.040  ok
+
+ 694  parallel_quick_sort            4  Tuple: Nearly Sorted (n=10,000)                    64.446 ms     1.000                   0.250  ok
+ 695  parallel_quick_sort            8  Tuple: Nearly Sorted (n=10,000)                    66.092 ms     0.975                   0.122  ok
+ 696  parallel_quick_sort           16  Tuple: Nearly Sorted (n=10,000)                    94.906 ms     0.679                   0.042  ok
+
+ 697  parallel_bubble_sort           4  Tuple: Nearly Sorted (n=1,000)                     208.562 ms     1.000                   0.250  ok
+ 698  parallel_bubble_sort           8  Tuple: Nearly Sorted (n=1,000)                     272.429 ms     0.766                   0.096  ok
+ 699  parallel_bubble_sort          16  Tuple: Nearly Sorted (n=1,000)                     557.554 ms     0.374                   0.023  ok
+
+ 700  parallel_insertion_sort        4  Tuple: Nearly Sorted (n=1,000)                     313.769 ms     1.000                   0.250  ok
+ 701  parallel_insertion_sort        8  Tuple: Nearly Sorted (n=1,000)                     205.967 ms     1.523                   0.190  ok
+ 702  parallel_insertion_sort       16  Tuple: Nearly Sorted (n=1,000)                     703.070 ms     0.446                   0.028  ok
+
+ 703  parallel_merge_sort            4  Tuple: Nearly Sorted (n=1,000)                     987.750 µs     1.000                   0.250  ok
+ 704  parallel_merge_sort            8  Tuple: Nearly Sorted (n=1,000)                     1.021 ms     0.968                   0.121  ok
+ 705  parallel_merge_sort           16  Tuple: Nearly Sorted (n=1,000)                     978.011 µs     1.010                   0.063  ok
+
+ 706  parallel_quick_sort            4  Tuple: Nearly Sorted (n=1,000)                     1.638 ms     1.000                   0.250  ok
+ 707  parallel_quick_sort            8  Tuple: Nearly Sorted (n=1,000)                     1.614 ms     1.015                   0.127  ok
+ 708  parallel_quick_sort           16  Tuple: Nearly Sorted (n=1,000)                     1.565 ms     1.047                   0.065  ok
+
+ 709  parallel_bubble_sort           4  Tuple: Nearly Sorted (n=20)                        22.011 µs     1.000                   0.250  ok
+ 710  parallel_bubble_sort           8  Tuple: Nearly Sorted (n=20)                        22.141 µs     0.994                   0.124  ok
+ 711  parallel_bubble_sort          16  Tuple: Nearly Sorted (n=20)                        24.646 µs     0.893                   0.056  ok
+
+ 712  parallel_insertion_sort        4  Tuple: Nearly Sorted (n=20)                        11.432 µs     1.000                   0.250  ok
+ 713  parallel_insertion_sort        8  Tuple: Nearly Sorted (n=20)                        11.182 µs     1.022                   0.128  ok
+ 714  parallel_insertion_sort       16  Tuple: Nearly Sorted (n=20)                        10.981 µs     1.041                   0.065  ok
+
+ 715  parallel_merge_sort            4  Tuple: Nearly Sorted (n=20)                        32.501 µs     1.000                   0.250  ok
+ 716  parallel_merge_sort            8  Tuple: Nearly Sorted (n=20)                        23.254 µs     1.398                   0.175  ok
+ 717  parallel_merge_sort           16  Tuple: Nearly Sorted (n=20)                        23.724 µs     1.370                   0.086  ok
+
+ 718  parallel_quick_sort            4  Tuple: Nearly Sorted (n=20)                        18.234 µs     1.000                   0.250  ok
+ 719  parallel_quick_sort            8  Tuple: Nearly Sorted (n=20)                        17.453 µs     1.045                   0.131  ok
+ 720  parallel_quick_sort           16  Tuple: Nearly Sorted (n=20)                        18.214 µs     1.001                   0.063  ok
+
+ 721  parallel_bubble_sort           4  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+ 722  parallel_bubble_sort           8  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+ 723  parallel_bubble_sort          16  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+
+ 724  parallel_insertion_sort        4  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+ 725  parallel_insertion_sort        8  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+ 726  parallel_insertion_sort       16  Tuple: Random (n=1,000,000)                            —         —                       —  TIMEOUT
+
+ 727  parallel_merge_sort            4  Tuple: Random (n=1,000,000)                        2.015 s     1.000                   0.250  ok
+ 728  parallel_merge_sort            8  Tuple: Random (n=1,000,000)                        1.531 s     1.316                   0.165  ok
+ 729  parallel_merge_sort           16  Tuple: Random (n=1,000,000)                        1.410 s     1.429                   0.089  ok
+
+ 730  parallel_quick_sort            4  Tuple: Random (n=1,000,000)                        2.096 s     1.000                   0.250  ok
+ 731  parallel_quick_sort            8  Tuple: Random (n=1,000,000)                        1.463 s     1.432                   0.179  ok
+ 732  parallel_quick_sort           16  Tuple: Random (n=1,000,000)                        1.423 s     1.472                   0.092  ok
+
+ 733  parallel_bubble_sort           4  Tuple: Random (n=100,000)                              —         —                       —  TIMEOUT
+ 734  parallel_bubble_sort           8  Tuple: Random (n=100,000)                              —         —                       —  TIMEOUT
+ 735  parallel_bubble_sort          16  Tuple: Random (n=100,000)                          64.550 s         —                       —  ok
+
+ 736  parallel_insertion_sort        4  Tuple: Random (n=100,000)                              —         —                       —  TIMEOUT
+ 737  parallel_insertion_sort        8  Tuple: Random (n=100,000)                              —         —                       —  TIMEOUT
+ 738  parallel_insertion_sort       16  Tuple: Random (n=100,000)                          47.690 s         —                       —  ok
+
+ 739  parallel_merge_sort            4  Tuple: Random (n=100,000)                          189.729 ms     1.000                   0.250  ok
+ 740  parallel_merge_sort            8  Tuple: Random (n=100,000)                          177.373 ms     1.070                   0.134  ok
+ 741  parallel_merge_sort           16  Tuple: Random (n=100,000)                          206.356 ms     0.919                   0.057  ok
+
+ 742  parallel_quick_sort            4  Tuple: Random (n=100,000)                          186.668 ms     1.000                   0.250  ok
+ 743  parallel_quick_sort            8  Tuple: Random (n=100,000)                          168.067 ms     1.111                   0.139  ok
+ 744  parallel_quick_sort           16  Tuple: Random (n=100,000)                          210.039 ms     0.889                   0.056  ok
+
+ 745  parallel_bubble_sort           4  Tuple: Random (n=10,000)                           8.920 s     1.000                   0.250  ok
+ 746  parallel_bubble_sort           8  Tuple: Random (n=10,000)                           3.345 s     2.666                   0.333  ok
+ 747  parallel_bubble_sort          16  Tuple: Random (n=10,000)                           1.546 s     5.771                   0.361  ok
+
+ 748  parallel_insertion_sort        4  Tuple: Random (n=10,000)                           7.402 s     1.000                   0.250  ok
+ 749  parallel_insertion_sort        8  Tuple: Random (n=10,000)                           2.282 s     3.243                   0.405  ok
+ 750  parallel_insertion_sort       16  Tuple: Random (n=10,000)                           1.532 s     4.831                   0.302  ok
+
+ 751  parallel_merge_sort            4  Tuple: Random (n=10,000)                           59.336 ms     1.000                   0.250  ok
+ 752  parallel_merge_sort            8  Tuple: Random (n=10,000)                           80.600 ms     0.736                   0.092  ok
+ 753  parallel_merge_sort           16  Tuple: Random (n=10,000)                           100.178 ms     0.592                   0.037  ok
+
+ 754  parallel_quick_sort            4  Tuple: Random (n=10,000)                           70.874 ms     1.000                   0.250  ok
+ 755  parallel_quick_sort            8  Tuple: Random (n=10,000)                           66.158 ms     1.071                   0.134  ok
+ 756  parallel_quick_sort           16  Tuple: Random (n=10,000)                           99.090 ms     0.715                   0.045  ok
+
+ 757  parallel_bubble_sort           4  Tuple: Random (n=1,000)                            370.190 ms     1.000                   0.250  ok
+ 758  parallel_bubble_sort           8  Tuple: Random (n=1,000)                            587.400 ms     0.630                   0.079  ok
+ 759  parallel_bubble_sort          16  Tuple: Random (n=1,000)                            609.595 ms     0.607                   0.038  ok
+
+ 760  parallel_insertion_sort        4  Tuple: Random (n=1,000)                            1.511 s     1.000                   0.250  ok
+ 761  parallel_insertion_sort        8  Tuple: Random (n=1,000)                            561.818 ms     2.690                   0.336  ok
+ 762  parallel_insertion_sort       16  Tuple: Random (n=1,000)                            630.325 ms     2.398                   0.150  ok
+
+ 763  parallel_merge_sort            4  Tuple: Random (n=1,000)                            1.210 ms     1.000                   0.250  ok
+ 764  parallel_merge_sort            8  Tuple: Random (n=1,000)                            1.429 ms     0.847                   0.106  ok
+ 765  parallel_merge_sort           16  Tuple: Random (n=1,000)                            1.197 ms     1.011                   0.063  ok
+
+ 766  parallel_quick_sort            4  Tuple: Random (n=1,000)                            1.095 ms     1.000                   0.250  ok
+ 767  parallel_quick_sort            8  Tuple: Random (n=1,000)                            1.108 ms     0.989                   0.124  ok
+ 768  parallel_quick_sort           16  Tuple: Random (n=1,000)                            1.100 ms     0.996                   0.062  ok
+
+ 769  parallel_bubble_sort           4  Tuple: Random (n=20)                               31.319 µs     1.000                   0.250  ok
+ 770  parallel_bubble_sort           8  Tuple: Random (n=20)                               55.058 ms     0.001                       —  ok
+ 771  parallel_bubble_sort          16  Tuple: Random (n=20)                               28.163 µs     1.112                   0.070  ok
+
+ 772  parallel_insertion_sort        4  Tuple: Random (n=20)                               17.703 µs     1.000                   0.250  ok
+ 773  parallel_insertion_sort        8  Tuple: Random (n=20)                               17.503 µs     1.011                   0.126  ok
+ 774  parallel_insertion_sort       16  Tuple: Random (n=20)                               17.773 µs     0.996                   0.062  ok
+
+ 775  parallel_merge_sort            4  Tuple: Random (n=20)                               22.993 µs     1.000                   0.250  ok
+ 776  parallel_merge_sort            8  Tuple: Random (n=20)                               23.875 µs     0.963                   0.120  ok
+ 777  parallel_merge_sort           16  Tuple: Random (n=20)                               23.975 µs     0.959                   0.060  ok
+
+ 778  parallel_quick_sort            4  Tuple: Random (n=20)                               18.705 µs     1.000                   0.250  ok
+ 779  parallel_quick_sort            8  Tuple: Random (n=20)                               18.054 µs     1.036                   0.130  ok
+ 780  parallel_quick_sort           16  Tuple: Random (n=20)                               18.034 µs     1.037                   0.065  ok
+
+ 781  parallel_bubble_sort           4  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+ 782  parallel_bubble_sort           8  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+ 783  parallel_bubble_sort          16  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+
+ 784  parallel_insertion_sort        4  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+ 785  parallel_insertion_sort        8  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+ 786  parallel_insertion_sort       16  Tuple: Reverse (n=1,000,000)                           —         —                       —  TIMEOUT
+
+ 787  parallel_merge_sort            4  Tuple: Reverse (n=1,000,000)                       1.325 s     1.000                   0.250  ok
+ 788  parallel_merge_sort            8  Tuple: Reverse (n=1,000,000)                       1.067 s     1.242                   0.155  ok
+ 789  parallel_merge_sort           16  Tuple: Reverse (n=1,000,000)                       1.055 s     1.256                   0.079  ok
+
+ 790  parallel_quick_sort            4  Tuple: Reverse (n=1,000,000)                       5.874 s     1.000                   0.250  ok
+ 791  parallel_quick_sort            8  Tuple: Reverse (n=1,000,000)                       3.065 s     1.916                   0.239  ok
+ 792  parallel_quick_sort           16  Tuple: Reverse (n=1,000,000)                       2.191 s     2.681                   0.168  ok
+
+ 793  parallel_bubble_sort           4  Tuple: Reverse (n=100,000)                             —         —                       —  TIMEOUT
+ 794  parallel_bubble_sort           8  Tuple: Reverse (n=100,000)                             —         —                       —  TIMEOUT
+ 795  parallel_bubble_sort          16  Tuple: Reverse (n=100,000)                         71.032 s         —                       —  ok
+
+ 796  parallel_insertion_sort        4  Tuple: Reverse (n=100,000)                             —         —                       —  TIMEOUT
+ 797  parallel_insertion_sort        8  Tuple: Reverse (n=100,000)                             —         —                       —  TIMEOUT
+ 798  parallel_insertion_sort       16  Tuple: Reverse (n=100,000)                         76.486 s         —                       —  ok
+
+ 799  parallel_merge_sort            4  Tuple: Reverse (n=100,000)                         148.939 ms     1.000                   0.250  ok
+ 800  parallel_merge_sort            8  Tuple: Reverse (n=100,000)                         140.934 ms     1.057                   0.132  ok
+ 801  parallel_merge_sort           16  Tuple: Reverse (n=100,000)                         183.322 ms     0.812                   0.051  ok
+
+ 802  parallel_quick_sort            4  Tuple: Reverse (n=100,000)                         288.180 ms     1.000                   0.250  ok
+ 803  parallel_quick_sort            8  Tuple: Reverse (n=100,000)                         230.439 ms     1.251                   0.156  ok
+ 804  parallel_quick_sort           16  Tuple: Reverse (n=100,000)                         211.617 ms     1.362                   0.085  ok
+
+ 805  parallel_bubble_sort           4  Tuple: Reverse (n=10,000)                          11.865 s     1.000                   0.250  ok
+ 806  parallel_bubble_sort           8  Tuple: Reverse (n=10,000)                          4.065 s     2.919                   0.365  ok
+ 807  parallel_bubble_sort          16  Tuple: Reverse (n=10,000)                          2.714 s     4.372                   0.273  ok
+
+ 808  parallel_insertion_sort        4  Tuple: Reverse (n=10,000)                          11.561 s     1.000                   0.250  ok
+ 809  parallel_insertion_sort        8  Tuple: Reverse (n=10,000)                          3.363 s     3.437                   0.430  ok
+ 810  parallel_insertion_sort       16  Tuple: Reverse (n=10,000)                          1.667 s     6.935                   0.433  ok
+
+ 811  parallel_merge_sort            4  Tuple: Reverse (n=10,000)                          58.181 ms     1.000                   0.250  ok
+ 812  parallel_merge_sort            8  Tuple: Reverse (n=10,000)                          61.800 ms     0.941                   0.118  ok
+ 813  parallel_merge_sort           16  Tuple: Reverse (n=10,000)                          95.154 ms     0.611                   0.038  ok
+
+ 814  parallel_quick_sort            4  Tuple: Reverse (n=10,000)                          60.935 ms     1.000                   0.250  ok
+ 815  parallel_quick_sort            8  Tuple: Reverse (n=10,000)                          64.733 ms     0.941                   0.118  ok
+ 816  parallel_quick_sort           16  Tuple: Reverse (n=10,000)                          95.589 ms     0.637                   0.040  ok
+
+ 817  parallel_bubble_sort           4  Tuple: Reverse (n=1,000)                           346.966 ms     1.000                   0.250  ok
+ 818  parallel_bubble_sort           8  Tuple: Reverse (n=1,000)                           414.399 ms     0.837                   0.105  ok
+ 819  parallel_bubble_sort          16  Tuple: Reverse (n=1,000)                           528.243 ms     0.657                   0.041  ok
+
+ 820  parallel_insertion_sort        4  Tuple: Reverse (n=1,000)                           417.792 ms     1.000                   0.250  ok
+ 821  parallel_insertion_sort        8  Tuple: Reverse (n=1,000)                           870.667 ms     0.480                   0.060  ok
+ 822  parallel_insertion_sort       16  Tuple: Reverse (n=1,000)                           371.749 ms     1.124                   0.070  ok
+
+ 823  parallel_merge_sort            4  Tuple: Reverse (n=1,000)                           923.639 µs     1.000                   0.250  ok
+ 824  parallel_merge_sort            8  Tuple: Reverse (n=1,000)                           865.440 µs     1.067                   0.133  ok
+ 825  parallel_merge_sort           16  Tuple: Reverse (n=1,000)                           1.032 ms     0.895                   0.056  ok
+
+ 826  parallel_quick_sort            4  Tuple: Reverse (n=1,000)                           1.709 ms     1.000                   0.250  ok
+ 827  parallel_quick_sort            8  Tuple: Reverse (n=1,000)                           1.679 ms     1.018                   0.127  ok
+ 828  parallel_quick_sort           16  Tuple: Reverse (n=1,000)                           1.764 ms     0.969                   0.061  ok
+
+ 829  parallel_bubble_sort           4  Tuple: Reverse (n=20)                              32.601 µs     1.000                   0.250  ok
+ 830  parallel_bubble_sort           8  Tuple: Reverse (n=20)                              34.635 µs     0.941                   0.118  ok
+ 831  parallel_bubble_sort          16  Tuple: Reverse (n=20)                              32.822 µs     0.993                   0.062  ok
+
+ 832  parallel_insertion_sort        4  Tuple: Reverse (n=20)                              27.131 µs     1.000                   0.250  ok
+ 833  parallel_insertion_sort        8  Tuple: Reverse (n=20)                              28.403 µs     0.955                   0.119  ok
+ 834  parallel_insertion_sort       16  Tuple: Reverse (n=20)                              23.925 µs     1.134                   0.071  ok
+
+ 835  parallel_merge_sort            4  Tuple: Reverse (n=20)                              20.879 µs     1.000                   0.250  ok
+ 836  parallel_merge_sort            8  Tuple: Reverse (n=20)                              21.941 µs     0.952                   0.119  ok
+ 837  parallel_merge_sort           16  Tuple: Reverse (n=20)                              21.310 µs     0.980                   0.061  ok
+
+ 838  parallel_quick_sort            4  Tuple: Reverse (n=20)                              17.463 µs     1.000                   0.250  ok
+ 839  parallel_quick_sort            8  Tuple: Reverse (n=20)                              17.292 µs     1.010                   0.126  ok
+ 840  parallel_quick_sort           16  Tuple: Reverse (n=20)                              17.383 µs     1.005                   0.063  ok
+
+ 841  parallel_bubble_sort           4  Tuple: Sorted (n=1,000,000)                        21.102 s     1.000                   0.250  ok
+ 842  parallel_bubble_sort           8  Tuple: Sorted (n=1,000,000)                        14.817 s     1.424                   0.178  ok
+ 843  parallel_bubble_sort          16  Tuple: Sorted (n=1,000,000)                        18.681 s     1.130                   0.071  ok
+
+ 844  parallel_insertion_sort        4  Tuple: Sorted (n=1,000,000)                        25.176 s     1.000                   0.250  ok
+ 845  parallel_insertion_sort        8  Tuple: Sorted (n=1,000,000)                        29.421 s     0.856                   0.107  ok
+ 846  parallel_insertion_sort       16  Tuple: Sorted (n=1,000,000)                        25.436 s     0.990                   0.062  ok
+
+ 847  parallel_merge_sort            4  Tuple: Sorted (n=1,000,000)                        1.303 s     1.000                   0.250  ok
+ 848  parallel_merge_sort            8  Tuple: Sorted (n=1,000,000)                        1.127 s     1.156                   0.144  ok
+ 849  parallel_merge_sort           16  Tuple: Sorted (n=1,000,000)                        1.034 s     1.260                   0.079  ok
+
+ 850  parallel_quick_sort            4  Tuple: Sorted (n=1,000,000)                        8.036 s     1.000                   0.250  ok
+ 851  parallel_quick_sort            8  Tuple: Sorted (n=1,000,000)                        4.078 s     1.971                   0.246  ok
+ 852  parallel_quick_sort           16  Tuple: Sorted (n=1,000,000)                        2.789 s     2.881                   0.180  ok
+
+ 853  parallel_bubble_sort           4  Tuple: Sorted (n=100,000)                          805.037 ms     1.000                   0.250  ok
+ 854  parallel_bubble_sort           8  Tuple: Sorted (n=100,000)                          1.525 s     0.528                   0.066  ok
+ 855  parallel_bubble_sort          16  Tuple: Sorted (n=100,000)                          1.529 s     0.527                   0.033  ok
+
+ 856  parallel_insertion_sort        4  Tuple: Sorted (n=100,000)                          1.878 s     1.000                   0.250  ok
+ 857  parallel_insertion_sort        8  Tuple: Sorted (n=100,000)                          862.880 ms     2.176                   0.272  ok
+ 858  parallel_insertion_sort       16  Tuple: Sorted (n=100,000)                          3.806 s     0.493                   0.031  ok
+
+ 859  parallel_merge_sort            4  Tuple: Sorted (n=100,000)                          141.838 ms     1.000                   0.250  ok
+ 860  parallel_merge_sort            8  Tuple: Sorted (n=100,000)                          139.717 ms     1.015                   0.127  ok
+ 861  parallel_merge_sort           16  Tuple: Sorted (n=100,000)                          167.709 ms     0.846                   0.053  ok
+
+ 862  parallel_quick_sort            4  Tuple: Sorted (n=100,000)                          349.429 ms     1.000                   0.250  ok
+ 863  parallel_quick_sort            8  Tuple: Sorted (n=100,000)                          239.934 ms     1.456                   0.182  ok
+ 864  parallel_quick_sort           16  Tuple: Sorted (n=100,000)                          211.901 ms     1.649                   0.103  ok
+
+ 865  parallel_bubble_sort           4  Tuple: Sorted (n=10,000)                           713.758 ms     1.000                   0.250  ok
+ 866  parallel_bubble_sort           8  Tuple: Sorted (n=10,000)                           730.780 ms     0.977                   0.122  ok
+ 867  parallel_bubble_sort          16  Tuple: Sorted (n=10,000)                           700.699 ms     1.019                   0.064  ok
+
+ 868  parallel_insertion_sort        4  Tuple: Sorted (n=10,000)                           277.919 ms     1.000                   0.250  ok
+ 869  parallel_insertion_sort        8  Tuple: Sorted (n=10,000)                           335.831 ms     0.828                   0.103  ok
+ 870  parallel_insertion_sort       16  Tuple: Sorted (n=10,000)                           778.971 ms     0.357                   0.022  ok
+
+ 871  parallel_merge_sort            4  Tuple: Sorted (n=10,000)                           54.746 ms     1.000                   0.250  ok
+ 872  parallel_merge_sort            8  Tuple: Sorted (n=10,000)                           60.401 ms     0.906                   0.113  ok
+ 873  parallel_merge_sort           16  Tuple: Sorted (n=10,000)                           87.679 ms     0.624                   0.039  ok
+
+ 874  parallel_quick_sort            4  Tuple: Sorted (n=10,000)                           59.240 ms     1.000                   0.250  ok
+ 875  parallel_quick_sort            8  Tuple: Sorted (n=10,000)                           63.178 ms     0.938                   0.117  ok
+ 876  parallel_quick_sort           16  Tuple: Sorted (n=10,000)                           88.708 ms     0.668                   0.042  ok
+
+ 877  parallel_bubble_sort           4  Tuple: Sorted (n=1,000)                            301.924 ms     1.000                   0.250  ok
+ 878  parallel_bubble_sort           8  Tuple: Sorted (n=1,000)                            265.354 ms     1.138                   0.142  ok
+ 879  parallel_bubble_sort          16  Tuple: Sorted (n=1,000)                            466.431 ms     0.647                   0.040  ok
+
+ 880  parallel_insertion_sort        4  Tuple: Sorted (n=1,000)                            151.451 ms     1.000                   0.250  ok
+ 881  parallel_insertion_sort        8  Tuple: Sorted (n=1,000)                            339.962 ms     0.445                   0.056  ok
+ 882  parallel_insertion_sort       16  Tuple: Sorted (n=1,000)                            650.130 ms     0.233                   0.015  ok
+
+ 883  parallel_merge_sort            4  Tuple: Sorted (n=1,000)                            841.836 µs     1.000                   0.250  ok
+ 884  parallel_merge_sort            8  Tuple: Sorted (n=1,000)                            837.749 µs     1.005                   0.126  ok
+ 885  parallel_merge_sort           16  Tuple: Sorted (n=1,000)                            832.920 µs     1.011                   0.063  ok
+
+ 886  parallel_quick_sort            4  Tuple: Sorted (n=1,000)                            2.097 ms     1.000                   0.250  ok
+ 887  parallel_quick_sort            8  Tuple: Sorted (n=1,000)                            2.063 ms     1.017                   0.127  ok
+ 888  parallel_quick_sort           16  Tuple: Sorted (n=1,000)                            2.076 ms     1.010                   0.063  ok
+
+ 889  parallel_bubble_sort           4  Tuple: Sorted (n=20)                               18.726 µs     1.000                   0.250  ok
+ 890  parallel_bubble_sort           8  Tuple: Sorted (n=20)                               7.905 µs     2.369                   0.296  ok
+ 891  parallel_bubble_sort          16  Tuple: Sorted (n=20)                               7.173 µs     2.611                   0.163  ok
+
+ 892  parallel_insertion_sort        4  Tuple: Sorted (n=20)                               7.153 µs     1.000                   0.250  ok
+ 893  parallel_insertion_sort        8  Tuple: Sorted (n=20)                               7.284 µs     0.982                   0.123  ok
+ 894  parallel_insertion_sort       16  Tuple: Sorted (n=20)                               8.175 µs     0.875                   0.055  ok
+
+ 895  parallel_merge_sort            4  Tuple: Sorted (n=20)                               20.558 µs     1.000                   0.250  ok
+ 896  parallel_merge_sort            8  Tuple: Sorted (n=20)                               20.328 µs     1.011                   0.126  ok
+ 897  parallel_merge_sort           16  Tuple: Sorted (n=20)                               19.236 µs     1.069                   0.067  ok
+
+ 898  parallel_quick_sort            4  Tuple: Sorted (n=20)                               17.804 µs     1.000                   0.250  ok
+ 899  parallel_quick_sort            8  Tuple: Sorted (n=20)                               17.783 µs     1.001                   0.125  ok
+ 900  parallel_quick_sort           16  Tuple: Sorted (n=20)                               16.692 µs     1.067                   0.067  ok
+

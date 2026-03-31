@@ -1,0 +1,256 @@
+C++ parallel benchmark
+Dataset filter: n <= 20
+Machine CPU count: 16
+Worker counts: [4, 8, 16]
+Algorithms: 4
+Datasets: 15
+Total jobs: 180
+
+algorithm                  workers  dataset                                         wall       speedup  efficiency  status
+----------------------------------------------------------------------------------------------------------------------------
+[parallel_merge_sort] datasets: 15
+parallel_merge_sort            4  Int: Duplicates (n=20)                          285.406 us     1.000       0.250  ok
+parallel_merge_sort            8  Int: Duplicates (n=20)                          225.724 us     1.264       0.158  ok
+parallel_merge_sort           16  Int: Duplicates (n=20)                          318.449 us     0.896       0.056  ok
+
+parallel_merge_sort            4  Int: Nearly Sorted (n=20)                        82.325 us     1.000       0.250  ok
+parallel_merge_sort            8  Int: Nearly Sorted (n=20)                       185.809 us     0.443       0.055  ok
+parallel_merge_sort           16  Int: Nearly Sorted (n=20)                       278.384 us     0.296       0.018  ok
+
+parallel_merge_sort            4  Int: Random (n=20)                               89.869 us     1.000       0.250  ok
+parallel_merge_sort            8  Int: Random (n=20)                              182.513 us     0.492       0.062  ok
+parallel_merge_sort           16  Int: Random (n=20)                              274.767 us     0.327       0.020  ok
+
+parallel_merge_sort            4  Int: Reverse (n=20)                              84.188 us     1.000       0.250  ok
+parallel_merge_sort            8  Int: Reverse (n=20)                             179.297 us     0.470       0.059  ok
+parallel_merge_sort           16  Int: Reverse (n=20)                             267.303 us     0.315       0.020  ok
+
+parallel_merge_sort            4  Int: Sorted (n=20)                               89.308 us     1.000       0.250  ok
+parallel_merge_sort            8  Int: Sorted (n=20)                              174.157 us     0.513       0.064  ok
+parallel_merge_sort           16  Int: Sorted (n=20)                              309.643 us     0.288       0.018  ok
+
+parallel_merge_sort            4  Str: Mixed Case (n=20)                          104.266 us     1.000       0.250  ok
+parallel_merge_sort            8  Str: Mixed Case (n=20)                          197.251 us     0.529       0.066  ok
+parallel_merge_sort           16  Str: Mixed Case (n=20)                          307.108 us     0.340       0.021  ok
+
+parallel_merge_sort            4  Str: Nearly Sorted (n=20)                        81.874 us     1.000       0.250  ok
+parallel_merge_sort            8  Str: Nearly Sorted (n=20)                       181.031 us     0.452       0.057  ok
+parallel_merge_sort           16  Str: Nearly Sorted (n=20)                       283.092 us     0.289       0.018  ok
+
+parallel_merge_sort            4  Str: Random (n=20)                               96.692 us     1.000       0.250  ok
+parallel_merge_sort            8  Str: Random (n=20)                              196.089 us     0.493       0.062  ok
+parallel_merge_sort           16  Str: Random (n=20)                              373.132 us     0.259       0.016  ok
+
+parallel_merge_sort            4  Str: Reverse (n=20)                             129.864 us     1.000       0.250  ok
+parallel_merge_sort            8  Str: Reverse (n=20)                             243.738 us     0.533       0.067  ok
+parallel_merge_sort           16  Str: Reverse (n=20)                             411.794 us     0.315       0.020  ok
+
+parallel_merge_sort            4  Str: Sorted (n=20)                              118.133 us     1.000       0.250  ok
+parallel_merge_sort            8  Str: Sorted (n=20)                              254.358 us     0.464       0.058  ok
+parallel_merge_sort           16  Str: Sorted (n=20)                              415.952 us     0.284       0.018  ok
+
+parallel_merge_sort            4  Tuple: Dup Scores (n=20)                        133.521 us     1.000       0.250  ok
+parallel_merge_sort            8  Tuple: Dup Scores (n=20)                        304.873 us     0.438       0.055  ok
+parallel_merge_sort           16  Tuple: Dup Scores (n=20)                        418.066 us     0.319       0.020  ok
+
+parallel_merge_sort            4  Tuple: Nearly Sorted (n=20)                     115.698 us     1.000       0.250  ok
+parallel_merge_sort            8  Tuple: Nearly Sorted (n=20)                     276.149 us     0.419       0.052  ok
+parallel_merge_sort           16  Tuple: Nearly Sorted (n=20)                     402.927 us     0.287       0.018  ok
+
+parallel_merge_sort            4  Tuple: Random (n=20)                            193.604 us     1.000       0.250  ok
+parallel_merge_sort            8  Tuple: Random (n=20)                            276.480 us     0.700       0.088  ok
+parallel_merge_sort           16  Tuple: Random (n=20)                            394.011 us     0.491       0.031  ok
+
+parallel_merge_sort            4  Tuple: Reverse (n=20)                           135.925 us     1.000       0.250  ok
+parallel_merge_sort            8  Tuple: Reverse (n=20)                           202.812 us     0.670       0.084  ok
+parallel_merge_sort           16  Tuple: Reverse (n=20)                           277.582 us     0.490       0.031  ok
+
+parallel_merge_sort            4  Tuple: Sorted (n=20)                             97.072 us     1.000       0.250  ok
+parallel_merge_sort            8  Tuple: Sorted (n=20)                            195.247 us     0.497       0.062  ok
+parallel_merge_sort           16  Tuple: Sorted (n=20)                            293.432 us     0.331       0.021  ok
+
+[parallel_quick_sort] datasets: 15
+parallel_quick_sort            4  Int: Duplicates (n=20)                          105.278 us     1.000       0.250  ok
+parallel_quick_sort            8  Int: Duplicates (n=20)                          239.310 us     0.440       0.055  ok
+parallel_quick_sort           16  Int: Duplicates (n=20)                          281.629 us     0.374       0.023  ok
+
+parallel_quick_sort            4  Int: Nearly Sorted (n=20)                        89.959 us     1.000       0.250  ok
+parallel_quick_sort            8  Int: Nearly Sorted (n=20)                       188.996 us     0.476       0.059  ok
+parallel_quick_sort           16  Int: Nearly Sorted (n=20)                       271.180 us     0.332       0.021  ok
+
+parallel_quick_sort            4  Int: Random (n=20)                               81.914 us     1.000       0.250  ok
+parallel_quick_sort            8  Int: Random (n=20)                              176.391 us     0.464       0.058  ok
+parallel_quick_sort           16  Int: Random (n=20)                              280.327 us     0.292       0.018  ok
+
+parallel_quick_sort            4  Int: Reverse (n=20)                              78.368 us     1.000       0.250  ok
+parallel_quick_sort            8  Int: Reverse (n=20)                             181.642 us     0.431       0.054  ok
+parallel_quick_sort           16  Int: Reverse (n=20)                             273.294 us     0.287       0.018  ok
+
+parallel_quick_sort            4  Int: Sorted (n=20)                               81.293 us     1.000       0.250  ok
+parallel_quick_sort            8  Int: Sorted (n=20)                              194.085 us     0.419       0.052  ok
+parallel_quick_sort           16  Int: Sorted (n=20)                              296.488 us     0.274       0.017  ok
+
+parallel_quick_sort            4  Str: Mixed Case (n=20)                           97.534 us     1.000       0.250  ok
+parallel_quick_sort            8  Str: Mixed Case (n=20)                          249.279 us     0.391       0.049  ok
+parallel_quick_sort           16  Str: Mixed Case (n=20)                          466.217 us     0.209       0.013  ok
+
+parallel_quick_sort            4  Str: Nearly Sorted (n=20)                       108.744 us     1.000       0.250  ok
+parallel_quick_sort            8  Str: Nearly Sorted (n=20)                       180.339 us     0.603       0.075  ok
+parallel_quick_sort           16  Str: Nearly Sorted (n=20)                       272.903 us     0.398       0.025  ok
+
+parallel_quick_sort            4  Str: Random (n=20)                               94.228 us     1.000       0.250  ok
+parallel_quick_sort            8  Str: Random (n=20)                              175.881 us     0.536       0.067  ok
+parallel_quick_sort           16  Str: Random (n=20)                              254.709 us     0.370       0.023  ok
+
+parallel_quick_sort            4  Str: Reverse (n=20)                              80.201 us     1.000       0.250  ok
+parallel_quick_sort            8  Str: Reverse (n=20)                             177.243 us     0.452       0.057  ok
+parallel_quick_sort           16  Str: Reverse (n=20)                             261.091 us     0.307       0.019  ok
+
+parallel_quick_sort            4  Str: Sorted (n=20)                               81.333 us     1.000       0.250  ok
+parallel_quick_sort            8  Str: Sorted (n=20)                              171.613 us     0.474       0.059  ok
+parallel_quick_sort           16  Str: Sorted (n=20)                              262.573 us     0.310       0.019  ok
+
+parallel_quick_sort            4  Tuple: Dup Scores (n=20)                         94.748 us     1.000       0.250  ok
+parallel_quick_sort            8  Tuple: Dup Scores (n=20)                        198.022 us     0.478       0.060  ok
+parallel_quick_sort           16  Tuple: Dup Scores (n=20)                        275.919 us     0.343       0.021  ok
+
+parallel_quick_sort            4  Tuple: Nearly Sorted (n=20)                      86.202 us     1.000       0.250  ok
+parallel_quick_sort            8  Tuple: Nearly Sorted (n=20)                     178.726 us     0.482       0.060  ok
+parallel_quick_sort           16  Tuple: Nearly Sorted (n=20)                     375.456 us     0.230       0.014  ok
+
+parallel_quick_sort            4  Tuple: Random (n=20)                             86.332 us     1.000       0.250  ok
+parallel_quick_sort            8  Tuple: Random (n=20)                            182.153 us     0.474       0.059  ok
+parallel_quick_sort           16  Tuple: Random (n=20)                            410.091 us     0.211       0.013  ok
+
+parallel_quick_sort            4  Tuple: Reverse (n=20)                           119.735 us     1.000       0.250  ok
+parallel_quick_sort            8  Tuple: Reverse (n=20)                           194.265 us     0.616       0.077  ok
+parallel_quick_sort           16  Tuple: Reverse (n=20)                           303.922 us     0.394       0.025  ok
+
+parallel_quick_sort            4  Tuple: Sorted (n=20)                             85.230 us     1.000       0.250  ok
+parallel_quick_sort            8  Tuple: Sorted (n=20)                            198.924 us     0.428       0.054  ok
+parallel_quick_sort           16  Tuple: Sorted (n=20)                            296.418 us     0.288       0.018  ok
+
+[parallel_bubble_sort] datasets: 15
+parallel_bubble_sort           4  Int: Duplicates (n=20)                          112.100 us     1.000       0.250  ok
+parallel_bubble_sort           8  Int: Duplicates (n=20)                          202.891 us     0.553       0.069  ok
+parallel_bubble_sort          16  Int: Duplicates (n=20)                          355.158 us     0.316       0.020  ok
+
+parallel_bubble_sort           4  Int: Nearly Sorted (n=20)                       101.801 us     1.000       0.250  ok
+parallel_bubble_sort           8  Int: Nearly Sorted (n=20)                       184.657 us     0.551       0.069  ok
+parallel_bubble_sort          16  Int: Nearly Sorted (n=20)                       274.175 us     0.371       0.023  ok
+
+parallel_bubble_sort           4  Int: Random (n=20)                               83.126 us     1.000       0.250  ok
+parallel_bubble_sort           8  Int: Random (n=20)                              320.673 us     0.259       0.032  ok
+parallel_bubble_sort          16  Int: Random (n=20)                              257.094 us     0.323       0.020  ok
+
+parallel_bubble_sort           4  Int: Reverse (n=20)                              77.626 us     1.000       0.250  ok
+parallel_bubble_sort           8  Int: Reverse (n=20)                             167.265 us     0.464       0.058  ok
+parallel_bubble_sort          16  Int: Reverse (n=20)                             274.716 us     0.283       0.018  ok
+
+parallel_bubble_sort           4  Int: Sorted (n=20)                               82.354 us     1.000       0.250  ok
+parallel_bubble_sort           8  Int: Sorted (n=20)                              171.703 us     0.480       0.060  ok
+parallel_bubble_sort          16  Int: Sorted (n=20)                              278.664 us     0.296       0.018  ok
+
+parallel_bubble_sort           4  Str: Mixed Case (n=20)                           92.384 us     1.000       0.250  ok
+parallel_bubble_sort           8  Str: Mixed Case (n=20)                          226.565 us     0.408       0.051  ok
+parallel_bubble_sort          16  Str: Mixed Case (n=20)                          303.651 us     0.304       0.019  ok
+
+parallel_bubble_sort           4  Str: Nearly Sorted (n=20)                       101.761 us     1.000       0.250  ok
+parallel_bubble_sort           8  Str: Nearly Sorted (n=20)                       215.816 us     0.472       0.059  ok
+parallel_bubble_sort          16  Str: Nearly Sorted (n=20)                       287.180 us     0.354       0.022  ok
+
+parallel_bubble_sort           4  Str: Random (n=20)                               96.832 us     1.000       0.250  ok
+parallel_bubble_sort           8  Str: Random (n=20)                              178.024 us     0.544       0.068  ok
+parallel_bubble_sort          16  Str: Random (n=20)                              288.733 us     0.335       0.021  ok
+
+parallel_bubble_sort           4  Str: Reverse (n=20)                             104.196 us     1.000       0.250  ok
+parallel_bubble_sort           8  Str: Reverse (n=20)                             187.252 us     0.556       0.070  ok
+parallel_bubble_sort          16  Str: Reverse (n=20)                             271.510 us     0.384       0.024  ok
+
+parallel_bubble_sort           4  Str: Sorted (n=20)                               87.104 us     1.000       0.250  ok
+parallel_bubble_sort           8  Str: Sorted (n=20)                              230.623 us     0.378       0.047  ok
+parallel_bubble_sort          16  Str: Sorted (n=20)                              300.685 us     0.290       0.018  ok
+
+parallel_bubble_sort           4  Tuple: Dup Scores (n=20)                        115.687 us     1.000       0.250  ok
+parallel_bubble_sort           8  Tuple: Dup Scores (n=20)                        248.587 us     0.465       0.058  ok
+parallel_bubble_sort          16  Tuple: Dup Scores (n=20)                        292.310 us     0.396       0.025  ok
+
+parallel_bubble_sort           4  Tuple: Nearly Sorted (n=20)                      96.792 us     1.000       0.250  ok
+parallel_bubble_sort           8  Tuple: Nearly Sorted (n=20)                     181.572 us     0.533       0.067  ok
+parallel_bubble_sort          16  Tuple: Nearly Sorted (n=20)                     291.558 us     0.332       0.021  ok
+
+parallel_bubble_sort           4  Tuple: Random (n=20)                             88.777 us     1.000       0.250  ok
+parallel_bubble_sort           8  Tuple: Random (n=20)                            180.149 us     0.493       0.062  ok
+parallel_bubble_sort          16  Tuple: Random (n=20)                            427.464 us     0.208       0.013  ok
+
+parallel_bubble_sort           4  Tuple: Reverse (n=20)                            90.841 us     1.000       0.250  ok
+parallel_bubble_sort           8  Tuple: Reverse (n=20)                           227.327 us     0.400       0.050  ok
+parallel_bubble_sort          16  Tuple: Reverse (n=20)                           329.911 us     0.275       0.017  ok
+
+parallel_bubble_sort           4  Tuple: Sorted (n=20)                             88.176 us     1.000       0.250  ok
+parallel_bubble_sort           8  Tuple: Sorted (n=20)                            183.165 us     0.481       0.060  ok
+parallel_bubble_sort          16  Tuple: Sorted (n=20)                            266.541 us     0.331       0.021  ok
+
+[parallel_insertion_sort] datasets: 15
+parallel_insertion_sort        4  Int: Duplicates (n=20)                           88.617 us     1.000       0.250  ok
+parallel_insertion_sort        8  Int: Duplicates (n=20)                          217.378 us     0.408       0.051  ok
+parallel_insertion_sort       16  Int: Duplicates (n=20)                          268.665 us     0.330       0.021  ok
+
+parallel_insertion_sort        4  Int: Nearly Sorted (n=20)                        78.327 us     1.000       0.250  ok
+parallel_insertion_sort        8  Int: Nearly Sorted (n=20)                       164.730 us     0.475       0.059  ok
+parallel_insertion_sort       16  Int: Nearly Sorted (n=20)                       308.851 us     0.254       0.016  ok
+
+parallel_insertion_sort        4  Int: Random (n=20)                               91.732 us     1.000       0.250  ok
+parallel_insertion_sort        8  Int: Random (n=20)                              195.938 us     0.468       0.059  ok
+parallel_insertion_sort       16  Int: Random (n=20)                              288.593 us     0.318       0.020  ok
+
+parallel_insertion_sort        4  Int: Reverse (n=20)                              81.703 us     1.000       0.250  ok
+parallel_insertion_sort        8  Int: Reverse (n=20)                             181.091 us     0.451       0.056  ok
+parallel_insertion_sort       16  Int: Reverse (n=20)                             297.279 us     0.275       0.017  ok
+
+parallel_insertion_sort        4  Int: Sorted (n=20)                               98.225 us     1.000       0.250  ok
+parallel_insertion_sort        8  Int: Sorted (n=20)                              220.114 us     0.446       0.056  ok
+parallel_insertion_sort       16  Int: Sorted (n=20)                              293.312 us     0.335       0.021  ok
+
+parallel_insertion_sort        4  Str: Mixed Case (n=20)                          119.655 us     1.000       0.250  ok
+parallel_insertion_sort        8  Str: Mixed Case (n=20)                          200.878 us     0.596       0.074  ok
+parallel_insertion_sort       16  Str: Mixed Case (n=20)                          311.926 us     0.384       0.024  ok
+
+parallel_insertion_sort        4  Str: Nearly Sorted (n=20)                        84.890 us     1.000       0.250  ok
+parallel_insertion_sort        8  Str: Nearly Sorted (n=20)                       190.859 us     0.445       0.056  ok
+parallel_insertion_sort       16  Str: Nearly Sorted (n=20)                       280.237 us     0.303       0.019  ok
+
+parallel_insertion_sort        4  Str: Random (n=20)                               87.965 us     1.000       0.250  ok
+parallel_insertion_sort        8  Str: Random (n=20)                              176.682 us     0.498       0.062  ok
+parallel_insertion_sort       16  Str: Random (n=20)                              277.642 us     0.317       0.020  ok
+
+parallel_insertion_sort        4  Str: Reverse (n=20)                              86.563 us     1.000       0.250  ok
+parallel_insertion_sort        8  Str: Reverse (n=20)                             208.783 us     0.415       0.052  ok
+parallel_insertion_sort       16  Str: Reverse (n=20)                             287.411 us     0.301       0.019  ok
+
+parallel_insertion_sort        4  Str: Sorted (n=20)                              100.880 us     1.000       0.250  ok
+parallel_insertion_sort        8  Str: Sorted (n=20)                              175.099 us     0.576       0.072  ok
+parallel_insertion_sort       16  Str: Sorted (n=20)                              380.716 us     0.265       0.017  ok
+
+parallel_insertion_sort        4  Tuple: Dup Scores (n=20)                        100.509 us     1.000       0.250  ok
+parallel_insertion_sort        8  Tuple: Dup Scores (n=20)                        184.066 us     0.546       0.068  ok
+parallel_insertion_sort       16  Tuple: Dup Scores (n=20)                        288.943 us     0.348       0.022  ok
+
+parallel_insertion_sort        4  Tuple: Nearly Sorted (n=20)                     103.144 us     1.000       0.250  ok
+parallel_insertion_sort        8  Tuple: Nearly Sorted (n=20)                     203.342 us     0.507       0.063  ok
+parallel_insertion_sort       16  Tuple: Nearly Sorted (n=20)                     348.986 us     0.296       0.018  ok
+
+parallel_insertion_sort        4  Tuple: Random (n=20)                            142.338 us     1.000       0.250  ok
+parallel_insertion_sort        8  Tuple: Random (n=20)                            254.599 us     0.559       0.070  ok
+parallel_insertion_sort       16  Tuple: Random (n=20)                            356.721 us     0.399       0.025  ok
+
+parallel_insertion_sort        4  Tuple: Reverse (n=20)                           101.561 us     1.000       0.250  ok
+parallel_insertion_sort        8  Tuple: Reverse (n=20)                           216.968 us     0.468       0.059  ok
+parallel_insertion_sort       16  Tuple: Reverse (n=20)                           301.537 us     0.337       0.021  ok
+
+parallel_insertion_sort        4  Tuple: Sorted (n=20)                             90.089 us     1.000       0.250  ok
+parallel_insertion_sort        8  Tuple: Sorted (n=20)                            206.559 us     0.436       0.055  ok
+parallel_insertion_sort       16  Tuple: Sorted (n=20)                            302.318 us     0.298       0.019  ok
+
+Results saved to: /home/murelapirati/Documents/facultate/ore/aw/sorting/results_cpp_parallel.csv
+Log saved to: /home/murelapirati/Documents/facultate/ore/aw/sorting/benchmark_cpp_parallel_log.txt
