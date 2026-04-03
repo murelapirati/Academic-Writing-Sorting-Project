@@ -1,4 +1,0 @@
-/home/murelapirati/Documents/facultate/ore/aw/sorting/cpp/build/CMakeFiles/benchmark_cpp_single.dir
-/home/murelapirati/Documents/facultate/ore/aw/sorting/cpp/build/CMakeFiles/benchmark_cpp_parallel.dir
-/home/murelapirati/Documents/facultate/ore/aw/sorting/cpp/build/CMakeFiles/edit_cache.dir
-/home/murelapirati/Documents/facultate/ore/aw/sorting/cpp/build/CMakeFiles/rebuild_cache.dir
